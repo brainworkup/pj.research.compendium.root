@@ -10,3 +10,5 @@
 ^README\.Rmd$
 ^README\.html$
 ^\.github$
+^Dockerfile$
+^\.dockerignore$

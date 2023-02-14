@@ -3,6 +3,15 @@
 # pj.research.compendium.root
 
 <!-- badges: start -->
+
+[![R CMD
+Check](https://github.com/brainworkup/pj.research.compendium.root/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/brainworkup/pj.research.compendium.root/actions/workflows/R-CMD-check.yaml)
+[![License:
+MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://choosealicense.com/licenses/mit/)
+[![LifeCycle](https://img.shields.io/badge/lifecycle-experimental-orange)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
+[![Project Status:
+Active](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
+[![Dependencies](https://img.shields.io/badge/dependencies-2/94-green?style=flat)](#)
 <!-- badges: end -->
 
 Research Compendium of the project **{{ PLEASE ADD A FEW WORDS }}**
@@ -44,7 +53,25 @@ This repository is structured as follow:
 
 ### Usage
 
-Clone the repository, open R/RStudio and run:
+-   Clone this repository
+-   Open a terminal
+-   Build the Docker image with:
+
+<!-- -->
+
+    docker build -t "pj.research.compendium.root" .
+
+-   Start a container based on this image:
+
+<!-- -->
+
+    docker run --rm -p 127.0.0.1:8787:8787 -e DISABLE_AUTH=true pj.research.compendium.root
+
+-   On a web browser enter this URL: `127.0.0.1:8787`. A new RStudio
+    Server instance will be available.
+-   To run the analysis:
+
+<!-- -->
 
     source("make.R")
 
