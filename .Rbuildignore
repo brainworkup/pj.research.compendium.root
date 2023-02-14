@@ -12,3 +12,8 @@
 ^\.github$
 ^Dockerfile$
 ^\.dockerignore$
+analysis
+^manuscript$
+^posters$
+^slides$
+^vignettes/som\.Rmd$

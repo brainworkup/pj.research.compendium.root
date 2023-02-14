@@ -11,6 +11,7 @@ To learn more about Quarto see <https://quarto.org>.
 library(sketchy)
 library(vertical)
 library(rcompendium)
+remotes::install_github('yonicd/sinew')
 
 rcompendium::new_compendium(
   compendium = ".",
@@ -31,4 +32,84 @@ rcompendium::new_compendium(
   overwrite = FALSE,
   quiet = FALSE
 )
+```
+
+```{r}
+
+rcompendium::refresh(
+  make = TRUE
+)
+
+rcompendium::refresh(
+  compendium = "analysis",
+  make = TRUE,
+  check = TRUE,
+  quiet = FALSE
+)
+
+
+rcompendium::add_renv()
+
+# Add dependencies in DESCRIPTION
+rcompendium::add_dependencies()
+
+# Add minimal R version to DESCRIPTION
+rcompendium::add_r_depend()
+	
+# Add to the .gitignore file
+rcompendium::add_to_gitignore()
+
+# Add to the .Rbuildignore file
+rcompendium::add_to_buildignore()
+	
+# Setup GitHub Actions to check package
+rcompendium::add_github_actions_check()
+	
+# Setup GitHub Actions to build and deploy package website
+rcompendium::add_github_actions_pkgdown()
+	
+# Setup GitHub Actions to report code coverage
+rcompendium::add_github_actions_codecov()
+	
+# Setup GitHub Actions to render README
+rcompendium::add_github_actions_render()
+
+# Get all external dependencies
+rcompendium::get_all_dependencies(pkg = NULL)
+
+```
+
+```{r}
+## rrtools
+
+usethis::use_mit_license(copyright_holder = "My Name")
+
+# adds analysis folders w Quarto
+rrtools::use_analysis()
+```
+
+```{r}
+## vertical
+
+# Initialize manuscript
+vertical::init_papaja()
+
+# Initialize posters
+vertical::init_poster()
+
+# Initialize slides
+vertical::init_slides()
+
+# Initialize supplemental materials
+vertical::init_som()
+
+```
+
+```{r}
+
+sinew::pretty_namespace
+pkg_dir_R <- "R/"
+sinew::pretty_namespace(pkg_dir_R,overwrite = TRUE)
+sinew::sinew_opts$set(markdown_links = TRUE)
+sinew::makeOxyFile(input = pkg_dir_R, overwrite = TRUE, verbose = FALSE)
 ```
