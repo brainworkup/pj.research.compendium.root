@@ -1,0 +1,21 @@
+Package: pj.research.compendium.root
+Type: Package
+Title: The Title of the Project
+Version: 0.0.0.9000
+Authors@R: c(
+    person(given   = "Joey",
+           family  = "Trampush",
+           role    = c("aut", "cre", "cph"),
+           email   = "j.trampush@gmail.com",
+           comment = c(ORCID = "0000-0003-0830-508X")))
+Description: A paragraph providing a full description of the project (on 
+    several lines...)
+URL: https://github.com/brainworkup/pj.research.compendium.root
+BugReports: https://github.com/brainworkup/pj.research.compendium.root/issues
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.3.9000
+Imports: 
+    devtools,
+    here

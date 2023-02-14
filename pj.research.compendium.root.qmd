@@ -1,0 +1,34 @@
+---
+title: "pj.research.compendium.root"
+---
+
+## Quarto
+
+Quarto enables you to weave together content and executable code into a finished document.
+To learn more about Quarto see <https://quarto.org>.
+
+```{r}
+library(sketchy)
+library(vertical)
+library(rcompendium)
+
+rcompendium::new_compendium(
+  compendium = ".",
+  license = "MIT",
+  status = "active",
+  lifecycle = "experimental",
+  vignette = FALSE,
+  test = FALSE,
+  create_repo = TRUE,
+  private = TRUE,
+  gh_check = TRUE,
+  codecov = TRUE,
+  website = FALSE,
+  gh_render = TRUE,
+  organisation = NULL,
+  renv = FALSE,
+  dockerfile = TRUE,
+  overwrite = FALSE,
+  quiet = FALSE
+)
+```
