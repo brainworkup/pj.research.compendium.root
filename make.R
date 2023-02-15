@@ -12,7 +12,7 @@
 
 ## Install Dependencies (listed in DESCRIPTION) ----
 
-devtools::install_deps(upgrade = "never")
+renv::restore()
 
 
 ## Load Project Addins (R Functions and Packages) ----

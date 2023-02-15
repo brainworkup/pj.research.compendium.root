@@ -82,9 +82,9 @@ rcompendium::add_to_buildignore(c("_quarto.yml", ".vscode"))
 	
 # Setup GitHub Actions to check package
 rcompendium::add_github_actions_check()
-	
-# Setup GitHub Actions to build and deploy package website
-rcompendium::add_github_actions_pkgdown()
+
+# # Setup GitHub Actions to build and deploy package website
+# rcompendium::add_github_actions_pkgdown()
 	
 # Setup GitHub Actions to report code coverage
 rcompendium::add_github_actions_codecov()
@@ -128,4 +128,15 @@ sinew::pretty_namespace(pkg_dir_R,overwrite = TRUE)
 sinew::sinew_opts$set(markdown_links = TRUE)
 sinew::makeOxyFile(input = pkg_dir_R, overwrite = TRUE, verbose = FALSE)
 
+```
+
+```{r}
+## Example data preprocessing script
+
+# Load data
+mydata <- data.frame(a = 1, b = 2)
+
+# Processing ...
+
+usethis::use_data(mydata)
 ```

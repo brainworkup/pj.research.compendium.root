@@ -19,3 +19,25 @@ RoxygenNote: 7.2.3.9000
 Suggests: 
     knitr,
     rmarkdown
+Imports: 
+    bwu,
+    data.table,
+    dplyr,
+    ggplot2,
+    ggthemes,
+    glue,
+    graphics,
+    grDevices,
+    here,
+    highcharter,
+    janitor,
+    png,
+    readr,
+    readxl,
+    rJava,
+    stats,
+    tabulizer,
+    tibble,
+    tidytable,
+    tools,
+    utils
