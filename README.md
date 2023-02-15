@@ -29,7 +29,7 @@ This repository is structured as follow:
 -   [`data/`](https://github.com/brainworkup/pj.research.compendium.root/tree/master/data):
     contains all raw data required to perform analyses
 
--   [`analyses/`](https://github.com/brainworkup/pj.research.compendium.root/tree/master/analyses/):
+-   [`analysis/`](https://github.com/brainworkup/pj.research.compendium.root/tree/master/analyses/):
     contains R scripts to run each step of the workflow
 
 -   [`outputs/`](https://github.com/brainworkup/pj.research.compendium.root/tree/master/outputs):
