@@ -24,3 +24,16 @@ analysis
 ^render-in-docker\.yaml$
 ^_extensions$
 ^dendron$
+^notes$
+^bibliography\.bib$
+^code$
+^dendron\.yml$
+^docs$
+^elsarticle-num\.bst$
+^elsarticle\.cls$
+^index\.qmd$
+^index\.spl$
+^index\.tex$
+^pj\.research\.compendium\.root\.code-workspace$
+^pj\.research\.compendium\.root\.qmd$
+^pkg\.lock$

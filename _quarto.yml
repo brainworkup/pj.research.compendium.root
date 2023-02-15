@@ -1,9 +1,8 @@
 project:
-  title: "pj.research.compendium.root"
+  title: "Root R-based Research Compendium"
   output-dir: docs
   render:
-    - section1.qmd
-    - section2.qmd
+    - index.qmd
 
 toc: true
 number-sections: true
@@ -14,6 +13,6 @@ format:
     css: styles.css
     html-math-method: katex
   pdf:
-    documentclass: report
+    documentclass: scrreprt
     margin-left: 30mm
     margin-right: 30mm

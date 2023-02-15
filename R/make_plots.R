@@ -1,18 +1,79 @@
-#' Drilldown on neuropsych domains.
-#'
-#' This function uses the R Highcharter package and drilldown function to "drill down" on neuropsychological domains and test scores.
-#'
-#' \code{drilldown} Creates a highcharter drilldown interactive plot.
-#'
-#' @param data Dataset to use.
-#' @param patient Patient's first name.
-#' @param mean_z Mean z-score.
-#' @param mean_percentile Mean percentile.
-#' @param ... Numeric, complex, or logical vectors.
-#'
-#' @return A drilldown plot
-#'
-#' @export
+#' @title FUNCTION_TITLE
+#' @description FUNCTION_DESCRIPTION
+#' @param data PARAM_DESCRIPTION
+#' @param x PARAM_DESCRIPTION
+#' @param y PARAM_DESCRIPTION
+#' @param ... PARAM_DESCRIPTION
+#' @return OUTPUT_DESCRIPTION
+#' @details DETAILS
+#' @examples 
+#' \dontrun{
+#' if(interactive()){
+#'  #EXAMPLE1
+#'  }
+#' }
+#' @seealso 
+#'  \code{\link[ggplot2]{ggplot}}, \code{\link[ggplot2]{geom_segment}}, \code{\link[ggplot2]{aes}}, \code{\link[ggplot2]{geom_point}}, \code{\link[ggplot2]{theme}}, \code{\link[ggplot2]{margin}}
+#'  \code{\link[stats]{reorder.default}}
+#'  \code{\link[ggthemes]{theme_fivethirtyeight}}
+#' @rdname dotplot
+#' @export 
+#' @importFrom ggplot2 ggplot geom_segment aes geom_point theme element_rect
+#' @importFrom stats reorder
+#' @importFrom ggthemes theme_fivethirtyeight
+dotplot <- function(data, x, y, ...) {
+  ggplot2::ggplot() +
+    ggplot2::geom_segment(
+      data = data,
+      ggplot2::aes(
+        x = x,
+        y = stats::reorder(y, x),
+        xend = 0,
+        yend = y
+      ),
+      size = 0.5
+    ) +
+    ggplot2::geom_point(
+      data = data,
+      ggplot2::aes(x = x, y = stats::reorder(y, x)),
+      shape = 21,
+      size = 6,
+      color = "black",
+      fill = "orange"
+    ) +
+    ggthemes::theme_fivethirtyeight() +
+    ggplot2::theme(panel.background = ggplot2::element_rect(fill = "white")) +
+    ggplot2::theme(plot.background = ggplot2::element_rect(fill = "white")) +
+    ggplot2::theme(panel.border = ggplot2::element_rect(color = "white"))
+}
+
+
+#' @title FUNCTION_TITLE
+#' @description FUNCTION_DESCRIPTION
+#' @param data PARAM_DESCRIPTION
+#' @param patient PARAM_DESCRIPTION, Default: NULL
+#' @param mean_z PARAM_DESCRIPTION
+#' @param mean_percentile PARAM_DESCRIPTION
+#' @param ... PARAM_DESCRIPTION
+#' @return OUTPUT_DESCRIPTION
+#' @details DETAILS
+#' @examples 
+#' \dontrun{
+#' if(interactive()){
+#'  #EXAMPLE1
+#'  }
+#' }
+#' @seealso 
+#'  \code{\link[tidytable]{group_by}}, \code{\link[tidytable]{summarize}}, \code{\link[tidytable]{mutate}}, \code{\link[tidytable]{case_when}}, \code{\link[tidytable]{arrange}}
+#'  \code{\link[desc]{desc}}
+#'  \code{\link[tibble]{tibble}}
+#'  \code{\link[highcharter]{list_parse}}, \code{\link[highcharter]{tooltip_table}}, \code{\link[highcharter]{highchart}}, \code{\link[highcharter]{hc_title}}, \code{\link[highcharter]{hc_add_series}}, \code{\link[highcharter]{hcaes}}, \code{\link[highcharter]{hc_xAxis}}, \code{\link[highcharter]{hc_yAxis}}, \code{\link[highcharter]{hc_tooltip}}, \code{\link[highcharter]{hc_plotOptions}}, \code{\link[highcharter]{hc_drilldown}}, \code{\link[highcharter]{hc_add_theme}}, \code{\link[highcharter]{hc_theme_sandsignika}}
+#' @rdname drilldown
+#' @export 
+#' @importFrom tidytable group_by summarize mutate case_when arrange
+#' @importFrom desc desc
+#' @importFrom tibble tibble
+#' @importFrom highcharter list_parse tooltip_table highchart hc_title hc_add_series hcaes hc_xAxis hc_yAxis hc_tooltip hc_plotOptions hc_drilldown hc_add_theme hc_theme_sandsignika
 drilldown <- function(data, patient = NULL, mean_z, mean_percentile, ...) {
 
   # Create 4 levels of dataframes for drilldown -----------------------
@@ -45,7 +106,7 @@ drilldown <- function(data, patient = NULL, mean_z, mean_percentile, ...) {
     )
 
   # 2. sort hi to lo
-  ncog1 <- tidytable::arrange(ncog1, desc(mean_percentile))
+  ncog1 <- tidytable::arrange(ncog1, desc::desc(mean_percentile))
 
   # 3. create tibble with new column with domain name lowercase
   ncog_level1_status <- tibble::tibble(
@@ -53,6 +114,32 @@ drilldown <- function(data, patient = NULL, mean_z, mean_percentile, ...) {
     y = ncog1$mean_z,
     y2 = ncog1$mean_percentile,
     range = ncog1$range,
+#' @title FUNCTION_TITLE
+#' @description FUNCTION_DESCRIPTION
+#' @param data PARAM_DESCRIPTION
+#' @param patient PARAM_DESCRIPTION, Default: NULL
+#' @param mean_z PARAM_DESCRIPTION
+#' @param mean_percentile PARAM_DESCRIPTION
+#' @param ... PARAM_DESCRIPTION
+#' @return OUTPUT_DESCRIPTION
+#' @details DETAILS
+#' @examples 
+#' \dontrun{
+#' if(interactive()){
+#'  #EXAMPLE1
+#'  }
+#' }
+#' @seealso 
+#'  \code{\link[tidytable]{group_by}}, \code{\link[tidytable]{summarize}}, \code{\link[tidytable]{mutate}}, \code{\link[tidytable]{case_when}}, \code{\link[tidytable]{arrange}}
+#'  \code{\link[desc]{desc}}
+#'  \code{\link[tibble]{tibble}}
+#'  \code{\link[highcharter]{list_parse}}, \code{\link[highcharter]{tooltip_table}}, \code{\link[highcharter]{highchart}}, \code{\link[highcharter]{hc_title}}, \code{\link[highcharter]{hc_add_series}}, \code{\link[highcharter]{hcaes}}, \code{\link[highcharter]{hc_xAxis}}, \code{\link[highcharter]{hc_yAxis}}, \code{\link[highcharter]{hc_tooltip}}, \code{\link[highcharter]{hc_plotOptions}}, \code{\link[highcharter]{hc_drilldown}}, \code{\link[highcharter]{hc_add_theme}}, \code{\link[highcharter]{hc_theme_sandsignika}}
+#' @rdname drilldown
+#' @export 
+#' @importFrom tidytable group_by summarize mutate case_when arrange
+#' @importFrom desc desc
+#' @importFrom tibble tibble
+#' @importFrom highcharter list_parse tooltip_table highchart hc_title hc_add_series hcaes hc_xAxis hc_yAxis hc_tooltip hc_plotOptions hc_drilldown hc_add_theme hc_theme_sandsignika
     drilldown = tolower(name)
   )
 
@@ -92,7 +179,7 @@ drilldown <- function(data, patient = NULL, mean_z, mean_percentile, ...) {
         )
 
       # 2. sort hi to lo
-      ncog2 <- tidytable::arrange(ncog2, desc(mean_percentile))
+      ncog2 <- tidytable::arrange(ncog2, desc::desc(mean_percentile))
 
       # 3. create tibble with new column with domain name lowercase
       ncog_level2_status <- tibble::tibble(
@@ -100,13 +187,39 @@ drilldown <- function(data, patient = NULL, mean_z, mean_percentile, ...) {
         y = ncog2$mean_z,
         y2 = ncog2$mean_percentile,
         range = ncog2$range,
+#' @title FUNCTION_TITLE
+#' @description FUNCTION_DESCRIPTION
+#' @param data PARAM_DESCRIPTION
+#' @param patient PARAM_DESCRIPTION, Default: NULL
+#' @param mean_z PARAM_DESCRIPTION
+#' @param mean_percentile PARAM_DESCRIPTION
+#' @param ... PARAM_DESCRIPTION
+#' @return OUTPUT_DESCRIPTION
+#' @details DETAILS
+#' @examples 
+#' \dontrun{
+#' if(interactive()){
+#'  #EXAMPLE1
+#'  }
+#' }
+#' @seealso 
+#'  \code{\link[tidytable]{group_by}}, \code{\link[tidytable]{summarize}}, \code{\link[tidytable]{mutate}}, \code{\link[tidytable]{case_when}}, \code{\link[tidytable]{arrange}}
+#'  \code{\link[desc]{desc}}
+#'  \code{\link[tibble]{tibble}}
+#'  \code{\link[highcharter]{list_parse}}, \code{\link[highcharter]{tooltip_table}}, \code{\link[highcharter]{highchart}}, \code{\link[highcharter]{hc_title}}, \code{\link[highcharter]{hc_add_series}}, \code{\link[highcharter]{hcaes}}, \code{\link[highcharter]{hc_xAxis}}, \code{\link[highcharter]{hc_yAxis}}, \code{\link[highcharter]{hc_tooltip}}, \code{\link[highcharter]{hc_plotOptions}}, \code{\link[highcharter]{hc_drilldown}}, \code{\link[highcharter]{hc_add_theme}}, \code{\link[highcharter]{hc_theme_sandsignika}}
+#' @rdname drilldown
+#' @export 
+#' @importFrom tidytable group_by summarize mutate case_when arrange
+#' @importFrom desc desc
+#' @importFrom tibble tibble
+#' @importFrom highcharter list_parse tooltip_table highchart hc_title hc_add_series hcaes hc_xAxis hc_yAxis hc_tooltip hc_plotOptions hc_drilldown hc_add_theme hc_theme_sandsignika
         drilldown = tolower(paste(x_level, name, sep = "_"))
       )
 
       list(
         id = tolower(x_level),
         type = "column",
-        data = list_parse(ncog_level2_status)
+        data = highcharter::list_parse(ncog_level2_status)
       )
     })
 
@@ -146,20 +259,46 @@ drilldown <- function(data, patient = NULL, mean_z, mean_percentile, ...) {
             )
           )
 
-        ncog3 <- tidytable::arrange(ncog3, desc(mean_percentile))
+        ncog3 <- tidytable::arrange(ncog3, desc::desc(mean_percentile))
 
         ncog_level3_status <- tibble::tibble(
           name = ncog3$narrow,
           y = ncog3$mean_z,
           y2 = ncog3$mean_percentile,
           range = ncog3$range,
+#' @title FUNCTION_TITLE
+#' @description FUNCTION_DESCRIPTION
+#' @param data PARAM_DESCRIPTION
+#' @param patient PARAM_DESCRIPTION, Default: NULL
+#' @param mean_z PARAM_DESCRIPTION
+#' @param mean_percentile PARAM_DESCRIPTION
+#' @param ... PARAM_DESCRIPTION
+#' @return OUTPUT_DESCRIPTION
+#' @details DETAILS
+#' @examples 
+#' \dontrun{
+#' if(interactive()){
+#'  #EXAMPLE1
+#'  }
+#' }
+#' @seealso 
+#'  \code{\link[tidytable]{group_by}}, \code{\link[tidytable]{summarize}}, \code{\link[tidytable]{mutate}}, \code{\link[tidytable]{case_when}}, \code{\link[tidytable]{arrange}}
+#'  \code{\link[desc]{desc}}
+#'  \code{\link[tibble]{tibble}}
+#'  \code{\link[highcharter]{list_parse}}, \code{\link[highcharter]{tooltip_table}}, \code{\link[highcharter]{highchart}}, \code{\link[highcharter]{hc_title}}, \code{\link[highcharter]{hc_add_series}}, \code{\link[highcharter]{hcaes}}, \code{\link[highcharter]{hc_xAxis}}, \code{\link[highcharter]{hc_yAxis}}, \code{\link[highcharter]{hc_tooltip}}, \code{\link[highcharter]{hc_plotOptions}}, \code{\link[highcharter]{hc_drilldown}}, \code{\link[highcharter]{hc_add_theme}}, \code{\link[highcharter]{hc_theme_sandsignika}}
+#' @rdname drilldown
+#' @export 
+#' @importFrom tidytable group_by summarize mutate case_when arrange
+#' @importFrom desc desc
+#' @importFrom tibble tibble
+#' @importFrom highcharter list_parse tooltip_table highchart hc_title hc_add_series hcaes hc_xAxis hc_yAxis hc_tooltip hc_plotOptions hc_drilldown hc_add_theme hc_theme_sandsignika
           drilldown = tolower(paste(x_level, y_level, name, sep = "_"))
         )
 
         list(
           id = tolower(paste(x_level, y_level, sep = "_")),
           type = "column",
-          data = list_parse(ncog_level3_status)
+          data = highcharter::list_parse(ncog_level3_status)
         )
       })
     }) %>% unlist(recursive = FALSE)
@@ -204,7 +343,7 @@ drilldown <- function(data, patient = NULL, mean_z, mean_percentile, ...) {
               )
             )
 
-          ncog4 <- tidytable::arrange(ncog4, desc(mean_percentile))
+          ncog4 <- tidytable::arrange(ncog4, desc::desc(mean_percentile))
 
           ncog_level4_status <- tibble::tibble(
             name = ncog4$scale,
@@ -216,7 +355,7 @@ drilldown <- function(data, patient = NULL, mean_z, mean_percentile, ...) {
           list(
             id = tolower(paste(x_level, y_level, z_level, sep = "_")),
             type = "column",
-            data = list_parse(ncog_level4_status)
+            data = highcharter::list_parse(ncog_level4_status)
           )
         })
       }) %>% unlist(recursive = FALSE)

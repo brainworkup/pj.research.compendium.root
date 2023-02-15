@@ -38,7 +38,7 @@ filter_domain <- c(
   "Working Memory",
   "Working Memory Index",
   "Processing Speed",
-  "Processing Speed Index"
+  "Processing Speed Index",
   "General Intelligence",
   "Cognitive Efficiency"
 )

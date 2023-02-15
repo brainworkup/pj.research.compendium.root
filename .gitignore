@@ -34,3 +34,5 @@ pods/service-connections
 .backup
 
 data/
+
+/.quarto/

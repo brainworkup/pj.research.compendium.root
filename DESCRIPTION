@@ -21,23 +21,19 @@ Suggests:
     rmarkdown
 Imports: 
     bwu,
-    data.table,
+    desc,
+    devtools,
     dplyr,
     ggplot2,
     ggthemes,
     glue,
-    graphics,
-    grDevices,
     here,
     highcharter,
     janitor,
-    png,
     readr,
     readxl,
-    rJava,
+    renv,
     stats,
     tabulizer,
     tibble,
-    tidytable,
-    tools,
-    utils
+    tidytable

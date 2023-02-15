@@ -83,6 +83,60 @@
       ],
       "Hash": "e779c7d9f35cc364438578f334cffee2"
     },
+    "R.cache": {
+      "Package": "R.cache",
+      "Version": "0.16.0",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "R",
+        "R.methodsS3",
+        "R.oo",
+        "R.utils",
+        "digest",
+        "utils"
+      ],
+      "Hash": "fe539ca3f8efb7410c3ae2cf5fe6c0f8"
+    },
+    "R.methodsS3": {
+      "Package": "R.methodsS3",
+      "Version": "1.8.2",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "R",
+        "utils"
+      ],
+      "Hash": "278c286fd6e9e75d0c2e8f731ea445c8"
+    },
+    "R.oo": {
+      "Package": "R.oo",
+      "Version": "1.25.0",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "R",
+        "R.methodsS3",
+        "methods",
+        "utils"
+      ],
+      "Hash": "a0900a114f4f0194cf4aa8cd4a700681"
+    },
+    "R.utils": {
+      "Package": "R.utils",
+      "Version": "2.12.2",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "R",
+        "R.methodsS3",
+        "R.oo",
+        "methods",
+        "tools",
+        "utils"
+      ],
+      "Hash": "325f01db13da12c04d8f6e7be36ff514"
+    },
     "R6": {
       "Package": "R6",
       "Version": "2.5.1.9000",
@@ -449,6 +503,24 @@
       "Requirements": [],
       "Hash": "96c01552bfd5661b9bbdefbc762f4bcd"
     },
+    "codetools": {
+      "Package": "codetools",
+      "Version": "0.2-19",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "R"
+      ],
+      "Hash": "c089a619a7fae175d149d89164f8c7d8"
+    },
+    "collections": {
+      "Package": "collections",
+      "Version": "0.3.7",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [],
+      "Hash": "90a0eda114ab0bef170ddbf5ef0cd93f"
+    },
     "colorspace": {
       "Package": "colorspace",
       "Version": "2.1-1",
@@ -526,6 +598,20 @@
         "R"
       ],
       "Hash": "e4f97056611e8e6b8b852d13b7400cf1"
+    },
+    "cyclocomp": {
+      "Package": "cyclocomp",
+      "Version": "1.1.0",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "callr",
+        "crayon",
+        "desc",
+        "remotes",
+        "withr"
+      ],
+      "Hash": "53cbed70a2f7472d48fb6aef08442f25"
     },
     "data.table": {
       "Package": "data.table",
@@ -1296,6 +1382,33 @@
       ],
       "Hash": "3d5108641f47470611a32d0bdf357a72"
     },
+    "languageserver": {
+      "Package": "languageserver",
+      "Version": "0.3.15",
+      "Source": "Repository",
+      "Repository": "https://reditorsupport.r-universe.dev",
+      "RemoteUrl": "https://github.com/reditorsupport/languageserver",
+      "RemoteRef": "HEAD",
+      "RemoteSha": "a1af1ca0c76fe9f50c2d57b56159fed0821fef19",
+      "Requirements": [
+        "R",
+        "R6",
+        "callr",
+        "collections",
+        "fs",
+        "jsonlite",
+        "lintr",
+        "parallel",
+        "roxygen2",
+        "stringi",
+        "styler",
+        "tools",
+        "utils",
+        "xml2",
+        "xmlparsedata"
+      ],
+      "Hash": "fbea0dd12b4f5dedbe3654e4b9cbbddc"
+    },
     "later": {
       "Package": "later",
       "Version": "1.3.0.9000",
@@ -1344,6 +1457,30 @@
         "rlang"
       ],
       "Hash": "ce2bc95768c7e81a8b269002f1af6e51"
+    },
+    "lintr": {
+      "Package": "lintr",
+      "Version": "3.0.2.9000",
+      "Source": "Repository",
+      "Repository": "https://r-lib.r-universe.dev",
+      "RemoteUrl": "https://github.com/r-lib/lintr",
+      "RemoteRef": "HEAD",
+      "RemoteSha": "c69f7926e2b01d06171dfe63bef6a90fd9a656f8",
+      "Requirements": [
+        "R",
+        "backports",
+        "codetools",
+        "cyclocomp",
+        "digest",
+        "glue",
+        "knitr",
+        "rex",
+        "stats",
+        "utils",
+        "xml2",
+        "xmlparsedata"
+      ],
+      "Hash": "5e8cb0e56034174958342a48c413f9c8"
     },
     "lubridate": {
       "Package": "lubridate",
@@ -2061,6 +2198,17 @@
       ],
       "Hash": "bed11cfa2d37900e90546a7fec4453b1"
     },
+    "rex": {
+      "Package": "rex",
+      "Version": "1.2.1.9000",
+      "Source": "Repository",
+      "Repository": "https://r-lib.r-universe.dev",
+      "RemoteUrl": "https://github.com/r-lib/rex",
+      "RemoteRef": "HEAD",
+      "RemoteSha": "6f437eb8136ae81bdba5fcefb6913eb4a7182f7f",
+      "Requirements": [],
+      "Hash": "cec8a19d41fc440dab818ffe4582da0d"
+    },
     "rjson": {
       "Package": "rjson",
       "Version": "0.2.21",
@@ -2525,6 +2673,28 @@
       ],
       "Hash": "df248e39541406d4834dccbf60c022e6"
     },
+    "styler": {
+      "Package": "styler",
+      "Version": "1.9.0.9000",
+      "Source": "Repository",
+      "Repository": "https://r-lib.r-universe.dev",
+      "RemoteUrl": "https://github.com/r-lib/styler",
+      "RemoteRef": "HEAD",
+      "RemoteSha": "62a9bca8955a3661b615710218f921a1467c1a9f",
+      "Requirements": [
+        "R",
+        "R.cache",
+        "cli",
+        "magrittr",
+        "purrr",
+        "rlang",
+        "rprojroot",
+        "tools",
+        "vctrs",
+        "withr"
+      ],
+      "Hash": "e56c7787b70c00b3a9bb6220ff4ea2ca"
+    },
     "svglite": {
       "Package": "svglite",
       "Version": "2.1.1.9000",
@@ -2600,14 +2770,14 @@
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
-      "RemoteRepo": "tabulizerjars",
       "RemoteUsername": "ropensci",
-      "RemoteRef": "HEAD",
+      "RemoteRepo": "tabulizerjars",
+      "RemoteRef": "master",
       "RemoteSha": "d1924e01db15b75251e4eb8f558e6e1a81e1c270",
       "Requirements": [
         "rJava"
       ],
-      "Hash": "19b09cc46a0c025054f38ae21700bf43"
+      "Hash": "2119acf2c46a72b25355d0a4e7148833"
     },
     "testthat": {
       "Package": "testthat",
@@ -3100,6 +3270,19 @@
         "methods"
       ],
       "Hash": "3b34af6355d6b0c3a082ff5fd500a93b"
+    },
+    "xmlparsedata": {
+      "Package": "xmlparsedata",
+      "Version": "1.0.5.9000",
+      "Source": "Repository",
+      "Repository": "https://r-lib.r-universe.dev",
+      "RemoteUrl": "https://github.com/r-lib/xmlparsedata",
+      "RemoteRef": "HEAD",
+      "RemoteSha": "ee6a15f0b9162e2d215635d9771dc5c09d3eacbf",
+      "Requirements": [
+        "R"
+      ],
+      "Hash": "0cb2814a0b4b1affa3753ef34eb82386"
     },
     "xopen": {
       "Package": "xopen",

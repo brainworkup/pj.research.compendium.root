@@ -1,11 +1,10 @@
 ---
 title: "pj.research.compendium.root"
+author: "Joey Trampush"
+date: today
 ---
 
-## Quarto
-
-Quarto enables you to weave together content and executable code into a finished document.
-To learn more about Quarto see <https://quarto.org>.
+## Setup
 
 ```{r}
 library(sketchy)
@@ -74,8 +73,21 @@ rcompendium::add_r_depend()
 rcompendium::add_to_gitignore("renv/")
 
 # Add to the .Rbuildignore file
-rcompendium::add_to_buildignore("notes/")
-	
+rcompendium::add_to_buildignore(c(
+  "bibliography.bib", 
+  "code/",
+  "dendron.yml",
+  "docs/", 
+  "elsarticle-num.bst", 
+  "elsarticle.cls",
+  "index.qmd", 
+  "index.spl",
+  "index.tex", 
+  "pj.research.compendium.root.code-workspace",
+  "pj.research.compendium.root.qmd",
+  "pkg.lock")
+)
+
 # Setup GitHub Actions to check package
 rcompendium::add_github_actions_check()
 
@@ -123,7 +135,7 @@ vertical::init_som()
 rcompendium::add_renv()
 
 pkg_dir_R <- "R/"
-sinew::pretty_namespace(pkg_dir_R,overwrite = TRUE)
+sinew::pretty_namespace(pkg_dir_R, overwrite = TRUE)
 sinew::sinew_opts$set(markdown_links = TRUE)
 sinew::makeOxyFile(input = pkg_dir_R, overwrite = TRUE, verbose = FALSE)
 
@@ -138,4 +150,29 @@ mydata <- data.frame(a = 1, b = 2)
 # Processing ...
 
 usethis::use_data(mydata)
+```
+
+## Workflow
+
+```{r}
+# Use devtools::document() to update the NAMESPACE
+devtools::document()
+# Use rcompendium::add_dependencies(".") to update the list of required dependencies in DESCRIPTION
+rcompendium::add_dependencies(".")
+# Do not use install.packages() but remotes::install_deps() (this will install required dependencies listed in DESCRIPTION)
+remotes::install_deps()
+# Do not use library() but devtools::load_all() (this will load required dependencies listed in DESCRIPTION and R functions stored in R/)
+devtools::load_all()
+# Do not source your functions but use instead devtools::load_all()
+devtools::load_all()
+
+## Check package ----
+
+devtools::check()
+
+## Example: use of an add_*() function ...
+## ... update 'Number of Dependencies Badge' in README.Rmd ----
+
+rcompendium::add_dependencies_badge()
+
 ```

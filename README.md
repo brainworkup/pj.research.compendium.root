@@ -11,7 +11,7 @@ MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://choosealicens
 [![LifeCycle](https://img.shields.io/badge/lifecycle-experimental-orange)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 [![Project Status:
 Active](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
-[![Dependencies](https://img.shields.io/badge/dependencies-16/77-red?style=flat)](#)
+[![Dependencies](https://img.shields.io/badge/dependencies-18/127-red?style=flat)](#)
 <!-- badges: end -->
 
 Research Compendium of the project **{{ PLEASE ADD A FEW WORDS }}**
