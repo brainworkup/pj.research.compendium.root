@@ -1,0 +1,31 @@
+{
+  "lockfile_version": 1,
+  "os": "macOS Big Sur ... 10.16",
+  "r_version": "R version 4.2.2 Patched (2023-02-09 r83797)",
+  "platform": "x86_64-apple-darwin17.0",
+  "packages": [
+    {
+      "ref": "deps::.",
+      "package": "pj.research.compendium.root-deps",
+      "version": "0.0.0.9000",
+      "type": "deps",
+      "direct": true,
+      "binary": false,
+      "dependencies": [],
+      "vignettes": false,
+      "metadata": {
+        "RemotePkgRef": "deps::.",
+        "RemoteType": "deps"
+      },
+      "sources": [],
+      "target": "src/contrib/pj.research.compendium.root-deps_0.0.0.9000.tar.gz",
+      "platform": "source",
+      "rversion": "*",
+      "directpkg": true,
+      "license": "MIT + file LICENSE",
+      "dep_types": ["Depends", "Imports", "LinkingTo"],
+      "params": [],
+      "install_args": ""
+    }
+  ]
+}

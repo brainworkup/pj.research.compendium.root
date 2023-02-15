@@ -17,3 +17,6 @@ analysis
 ^posters$
 ^slides$
 ^vignettes/som\.Rmd$
+^_quarto\.yml$
+^\.vscode$
+^render-in-docker\.yaml$

@@ -11,7 +11,7 @@ To learn more about Quarto see <https://quarto.org>.
 library(sketchy)
 library(vertical)
 library(rcompendium)
-remotes::install_github('yonicd/sinew')
+library(sinew)
 
 rcompendium::new_compendium(
   compendium = ".",
@@ -32,22 +32,40 @@ rcompendium::new_compendium(
   overwrite = FALSE,
   quiet = FALSE
 )
+
+update.packages(ask = FALSE, checkBuilt = TRUE)
+
+tinytex::tlmgr_update()
+
+### pak
+
+install.packages("pak", repos = sprintf(
+  "https://r-lib.github.io/p/pak/stable/%s/%s/%s",
+  .Platform$pkgType,
+  R.Version()$os,
+  R.Version()$arch
+))
+
+pak::lockfile_create()
+
+pak::pkg_install("brainworkup/bwu")
+
+pak::pkg_install("brainworkup/bwu", dependencies = TRUE)
+
 ```
 
 ```{r}
+## rcompendium
+rcompendium::refresh()
 
 rcompendium::refresh(
-  make = TRUE
-)
-
-rcompendium::refresh(
-  compendium = "analysis",
+  compendium = ".",
   make = TRUE,
   check = TRUE,
   quiet = FALSE
 )
 
-
+# Add renv
 rcompendium::add_renv()
 
 # Add dependencies in DESCRIPTION
@@ -60,7 +78,7 @@ rcompendium::add_r_depend()
 rcompendium::add_to_gitignore()
 
 # Add to the .Rbuildignore file
-rcompendium::add_to_buildignore()
+rcompendium::add_to_buildignore(c("_quarto.yml", ".vscode"))
 	
 # Setup GitHub Actions to check package
 rcompendium::add_github_actions_check()
@@ -75,17 +93,15 @@ rcompendium::add_github_actions_codecov()
 rcompendium::add_github_actions_render()
 
 # Get all external dependencies
-rcompendium::get_all_dependencies(pkg = NULL)
+rcompendium::get_all_dependencies(pkg = "tidytable")
 
 ```
 
 ```{r}
 ## rrtools
-
-usethis::use_mit_license(copyright_holder = "My Name")
-
 # adds analysis folders w Quarto
 rrtools::use_analysis()
+rrtools::use_dockerfile()
 ```
 
 ```{r}
@@ -107,9 +123,9 @@ vertical::init_som()
 
 ```{r}
 
-sinew::pretty_namespace
 pkg_dir_R <- "R/"
 sinew::pretty_namespace(pkg_dir_R,overwrite = TRUE)
 sinew::sinew_opts$set(markdown_links = TRUE)
 sinew::makeOxyFile(input = pkg_dir_R, overwrite = TRUE, verbose = FALSE)
+
 ```
