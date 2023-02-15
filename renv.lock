@@ -383,9 +383,8 @@
       "RemoteHost": "api.github.com",
       "RemoteRepo": "bwu",
       "RemoteUsername": "brainworkup",
-      "RemotePkgRef": "brainworkup/bwu",
       "RemoteRef": "HEAD",
-      "RemoteSha": "168bf6057eec1f0f9c549bb0a4deaad378d80d72",
+      "RemoteSha": "88f4838cb8209d982f5ccb90b2080908262e0c1e",
       "Requirements": [
         "R",
         "data.table",
@@ -417,7 +416,7 @@
         "tools",
         "utils"
       ],
-      "Hash": "a04018ec1d001e0c43a1ffc2b1e3c4fb"
+      "Hash": "cd6bfbc3fa6280dfe1320c584943845e"
     },
     "cachem": {
       "Package": "cachem",
@@ -617,10 +616,7 @@
       "Package": "data.table",
       "Version": "1.14.7",
       "Source": "Repository",
-      "Repository": "https://ropensci.r-universe.dev",
-      "RemoteUrl": "https://github.com/rdatatable/data.table",
-      "RemoteRef": "HEAD",
-      "RemoteSha": "cb8aeff9453acec878e5ab8515cda0d302c943eb",
+      "Repository": "CRAN",
       "Requirements": [
         "R",
         "methods"
