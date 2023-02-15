@@ -55,7 +55,7 @@ pak::pkg_install("brainworkup/bwu", dependencies = TRUE)
 ```
 
 ```{r}
-## rcompendium
+ ## rcompendium  
 rcompendium::refresh()
 
 rcompendium::refresh(
@@ -64,10 +64,6 @@ rcompendium::refresh(
   check = TRUE,
   quiet = FALSE
 )
-
-# Add renv
-rcompendium::add_renv()
-
 # Add dependencies in DESCRIPTION
 rcompendium::add_dependencies()
 
@@ -75,10 +71,10 @@ rcompendium::add_dependencies()
 rcompendium::add_r_depend()
 	
 # Add to the .gitignore file
-rcompendium::add_to_gitignore()
+rcompendium::add_to_gitignore("renv/")
 
 # Add to the .Rbuildignore file
-rcompendium::add_to_buildignore(c("_quarto.yml", ".vscode"))
+rcompendium::add_to_buildignore("renv/")
 	
 # Setup GitHub Actions to check package
 rcompendium::add_github_actions_check()
@@ -122,6 +118,9 @@ vertical::init_som()
 ```
 
 ```{r}
+
+# Add renv
+rcompendium::add_renv()
 
 pkg_dir_R <- "R/"
 sinew::pretty_namespace(pkg_dir_R,overwrite = TRUE)

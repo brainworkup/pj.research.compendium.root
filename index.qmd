@@ -1,0 +1,126 @@
+---
+title: Research Article
+subtitle: A Short Subtitle
+author:
+  - name: Joey W. Trampush
+    email: joey.trampush@med.usc.edu
+    affiliations: 
+        - id: ksom
+          name: USC Keck School of Medicine
+          department: Psychiatry
+          address: Street Address
+          city: Los Angeles
+          state: CA
+          postal-code: 90033
+    attributes:
+        corresponding: true
+    note: This is the first author footnote.
+  - name: Biggie Smalls
+    email: biggyy@usc.edu
+    affiliations:
+        - id: usc
+          name: USC
+          department: Department Name
+          address: Street Address
+          city: City
+          state: State
+          postal-code: Postal Code
+    note: |
+      Another author footnote, this is a very long footnote and it should be a really long footnote. But this footnote is not yet sufficiently long enough to make two lines of footnote text.
+keywords: 
+  - keyword1
+  - keyword2
+  - keyword3
+date: last-modified
+date-format: long
+
+format:
+  elsevier-pdf:
+    keep-tex: true
+    journal:
+      name: Journal Name
+      formatting: preprint
+      model: "3p"
+      cite-style: super
+    # output-file: "_index.pdf"
+  html:
+    toc: true
+    toc-location: left
+    html-math-method: katex
+    embed-resources: true
+    smooth-scroll: true
+    anchor-sections: true
+    theme: 
+      - united
+      - "inst/resources/theme.scss"
+      - "inst/resources/theme-dark.scss"
+  docx:
+    reference-doc: "inst/templates/template.docx"
+    # output-file: "_index.docx"
+execute:
+  echo: true
+  warning: false
+  message: false
+  comment: "#>"
+  fig-path: "analysis/figures/"
+  fig-dpi: 600
+filters:
+  - inst/templates/scholarly-metadata.lua
+  - inst/templates/author-info-blocks.lua
+  - inst/templates/pagebreak.lua
+bibliography: [analysis/paper/references.bib]
+csl: "inst/templates/journal-of-archaeological-science.csl" 
+highlights: |
+  These are the highlights. 
+---
+
+<!-- This is the format for text comments that will be ignored during renderings. Do not put R code in these comments because it will not be ignored. -->
+
+<!-- With the following code you can access and display values from the yml header above. -->
+
+**Keywords:** `r rmarkdown::metadata$keywords`
+
+**Highlights:** `r rmarkdown::metadata$highlights`
+
+<!-- The actual document text starts here: -->
+
+## Abstract
+
+{{< pagebreak >}}
+
+## Introduction
+
+{{< pagebreak >}}
+
+## Methods
+
+{{< pagebreak >}}
+
+## Results
+
+{{< pagebreak >}}
+
+Here is an example of inline code in the middle of a sentence.
+
+## Discussion
+
+{{< pagebreak >}}
+
+## Acknowledgements
+
+{{< pagebreak >}}
+
+<!-- The following line inserts a page break  -->
+
+{{< pagebreak >}}
+
+## References
+
+<!-- The following line ensures the references appear here for the MS Word or HTML output files, rather than right at the end of the document (this will not work for PDF files):  -->
+
+::: {#refs}
+:::
+
+{{< pagebreak >}}
+
+### Colophon

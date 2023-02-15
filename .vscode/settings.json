@@ -15,5 +15,7 @@
   "name": "Launch Workspace",
   "debugMode": "workspace",
   "workingDirectory": "${workspaceFolder}",
-  "allowGlobalDebugging": true
+  "allowGlobalDebugging": true,
+  "deno.enable": true,
+  "deno.unstable": true
 }

@@ -21,3 +21,5 @@ README.html
 inst/doc
 
 /.luarc.json
+_extensions/
+renv/

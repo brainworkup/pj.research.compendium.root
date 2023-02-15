@@ -1,0 +1,10 @@
+citHeader("To cite pj.research.compendium.root in publications use:")
+
+bibentry(
+  bibtype = "Manual",
+  title   = "pj.research.compendium.root: {An} {R} package to ...",
+  author  = c(person("Trampush Joey")),
+  year    = "2023",
+  note    = "R package version 0.0.0.9000",
+  url     = "https://github.com/brainworkup/pj.research.compendium.root"
+)

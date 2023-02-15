@@ -22,3 +22,4 @@ analysis
 ^_quarto\.yml$
 ^\.vscode$
 ^render-in-docker\.yaml$
+^_extensions$
