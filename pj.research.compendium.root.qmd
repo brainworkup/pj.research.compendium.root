@@ -74,7 +74,7 @@ rcompendium::add_r_depend()
 rcompendium::add_to_gitignore("renv/")
 
 # Add to the .Rbuildignore file
-rcompendium::add_to_buildignore("renv/")
+rcompendium::add_to_buildignore("notes/")
 	
 # Setup GitHub Actions to check package
 rcompendium::add_github_actions_check()

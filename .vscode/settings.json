@@ -17,5 +17,14 @@
   "workingDirectory": "${workspaceFolder}",
   "allowGlobalDebugging": true,
   "deno.enable": true,
-  "deno.unstable": true
+  "deno.unstable": true,
+  "files.exclude": {
+    "notes/.dendron.cache.json": true,
+    "notes/.vscode": true,
+    ".Rproj.user": true,
+    ".luarc.json": true,
+    ".dendron.ws": true,
+    ".dendron.port": true,
+    ".backup": true
+  }
 }

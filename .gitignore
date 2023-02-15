@@ -21,5 +21,16 @@ README.html
 inst/doc
 
 /.luarc.json
-_extensions/
-renv/
+
+## Dendron
+node_modules
+.dendron.*
+build
+seeds
+.next
+pods/service-connections
+/.luarc.json
+
+.backup
+
+data/

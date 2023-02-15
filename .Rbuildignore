@@ -23,3 +23,4 @@ analysis
 ^\.vscode$
 ^render-in-docker\.yaml$
 ^_extensions$
+^dendron$
