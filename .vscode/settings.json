@@ -9,5 +9,11 @@
     "sideBar.border": "#538e7c",
     "tab.activeBorder": "#538e7c"
   },
-  "peacock.color": "#406e60"
+  "peacock.color": "#406e60",
+  "type": "R-Debugger",
+  "request": "launch",
+  "name": "Launch Workspace",
+  "debugMode": "workspace",
+  "workingDirectory": "${workspaceFolder}",
+  "allowGlobalDebugging": true
 }
