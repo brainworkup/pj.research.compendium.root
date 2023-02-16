@@ -6,15 +6,17 @@ output: github_document
 
 
 ```{r, include = FALSE}
-knitr::opts_chunk$set(collapse  = TRUE,
-                      comment   = "#>",
-                      fig.path  = "man/figures/",
-                      out.width = "100%")
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/",
+  out.width = "100%"
+)
 ```
 
 
 
-# pj.research.compendium.root
+# Root-Research-Project-Compendium
 
 
 <!-- badges: start -->
@@ -26,7 +28,7 @@ knitr::opts_chunk$set(collapse  = TRUE,
 <!-- badges: end -->
 
 
-Research Compendium of the project **{{ PLEASE ADD A FEW WORDS }}**
+Research Compendium of the project **{{ TODO: }}**
 
 
 
@@ -45,7 +47,10 @@ This repository is structured as follow:
 - [`data/`](https://github.com/brainworkup/pj.research.compendium.root/tree/master/data):
 contains all raw data required to perform analyses
 
-- [`analyses/`](https://github.com/brainworkup/pj.research.compendium.root/tree/master/analyses/):
+- [`analysis/`](https://github.com/brainworkup/pj.research.compendium.root/tree/master/analysis/):
+contains R scripts to run each step of the workflow
+
+- [`code/`](https://github.com/brainworkup/pj.research.compendium.root/tree/master/code/):
 contains R scripts to run each step of the workflow
 
 - [`outputs/`](https://github.com/brainworkup/pj.research.compendium.root/tree/master/outputs):
