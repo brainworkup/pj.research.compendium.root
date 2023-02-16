@@ -35,14 +35,6 @@ date: last-modified
 date-format: long
 
 format:
-  elsevier-pdf:
-    keep-tex: true
-    journal:
-      name: Journal Name
-      formatting: preprint
-      model: "3p"
-      cite-style: super
-      output-file: "index.pdf"
   html:
     toc: true
     toc-location: left
@@ -54,6 +46,14 @@ format:
       - united
       - "inst/resources/theme.scss"
       - "inst/resources/theme-dark.scss"
+  elsevier-pdf:
+    keep-tex: true
+    journal:
+      name: Journal Name
+      formatting: preprint
+      model: "3p"
+      cite-style: super
+      output-file: "index.pdf"
   docx:
     reference-doc: "inst/templates/template.docx"
     output-file: "index.docx"

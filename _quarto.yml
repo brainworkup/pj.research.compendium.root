@@ -10,7 +10,7 @@ bibliography: references.bib
 
 format:
   html:
-    css: styles.css
+    # css: styles.css
     html-math-method: katex
   pdf:
     documentclass: scrreprt
