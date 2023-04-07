@@ -1,0 +1,251 @@
+\documentclass[11pt,]{article}
+\usepackage{lmodern}
+\usepackage{setspace}
+\setstretch{0.9}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+\else % if luatex or xelatex
+  \ifxetex
+    \usepackage{mathspec}
+  \else
+    \usepackage{fontspec}
+  \fi
+  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+    \setmainfont[]{Helvetica}
+\fi
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+% use microtype if available
+\IfFileExists{microtype.sty}{%
+\usepackage{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\usepackage[margin=.5in]{geometry}
+\usepackage{hyperref}
+\hypersetup{unicode=true,
+            pdfborder={0 0 0},
+            breaklinks=true}
+\urlstyle{same}  % don't use monospace font for urls
+\usepackage{natbib}
+\bibliographystyle{plainnat}
+\IfFileExists{parskip.sty}{%
+\usepackage{parskip}
+}{% else
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{5}
+
+%%% Use protect on footnotes to avoid problems with footnotes in titles
+\let\rmarkdownfootnote\footnote%
+\def\footnote{\protect\rmarkdownfootnote}
+
+
+  \title{}
+    \author{}
+    \date{}
+  
+
+%%%%%%%%%%
+% personal preamble edits here
+%%%%%%%%%%
+\pagenumbering{gobble}
+
+% can toggle this for Helvetica
+%\usepackage{helvet}
+%\renewcommand{\familydefault}{\sfdefault}
+
+% \titlespacing*{\paragraph}{0pt}{2pt}{1em}
+
+% set section numbering/lettering
+% tips for seccntformat: https://tex.stackexchange.com/questions/95896/how-to-format-subsection-title-without-packages
+\makeatletter
+\def\@seccntformat#1{%
+  \expandafter\ifx\csname c@#1\endcsname\c@section\else
+  \expandafter\ifx\csname c@#1\endcsname\c@paragraph\else
+  \csname the#1\endcsname\quad
+  \fi\fi}
+  
+  % stucture for these commands: https://texfaq.org/FAQ-atsigns
+  \renewcommand\section{
+  \@startsection{section}{1}{\z@}
+    {-3.5ex \@plus -1ex \@minus -.2ex}
+    {1.0ex \@plus.2ex} %reduce space below section (was 1.5ex)
+    {\normalfont\normalsize\bf\uppercase}} %modify font style
+    
+  \renewcommand\subsection{
+  \@startsection{subsection}{2}{\z@}
+    {-1.5ex\@plus -1ex \@minus -.2ex}%reduce space above subsection (was -3.25ex)
+    {0.5ex \@plus .2ex}%reduce space below subsection (was 1.5ex)
+    {\normalfont\normalsize\bf}} %modify font style
+    
+  \renewcommand\subsubsection{
+  \@startsection{subsubsection}{3}{\z@}
+    {-1.0ex\@plus -1ex \@minus -.2ex}%reduce space above subsubsection (was -3.25ex)
+    {0.5ex \@plus .2ex}%reduce space below subsubsection (was 1.5ex)
+    {\normalfont\normalsize\bf}} %modify font style
+    
+  \renewcommand\paragraph{
+  \@startsection{paragraph}{4}{\z@}
+    {-0.5ex\@plus -1ex \@minus -.2ex}%reduce space above paragraph (was -3.25ex)
+    {-1.5ex \@plus .2ex}%convert space below paragraph to an indent (was 1.5ex)
+    {\normalfont\normalsize\bf}} %modify font style    
+\makeatother
+
+\renewcommand\thesubsection{\Alph{subsection}.}
+\renewcommand\thesubsubsection{\thesubsection\arabic{subsubsection}.}
+
+% reduce spacing at the top of lists
+\usepackage{enumitem}
+\setlist{topsep = 2pt}
+
+% allow text to wrap around figures
+\usepackage{graphicx}
+\usepackage{wrapfig}
+
+%%%%%%%%%%
+
+\begin{document}
+
+\hypertarget{specific-aims}{%
+\section{SPECIFIC AIMS}\label{specific-aims}}
+
+\hypertarget{background}{%
+\subsection{Background}\label{background}}
+
+\hypertarget{trajectory-of-adhd-across-development}{%
+\subsubsection{Trajectory of ADHD across
+development}\label{trajectory-of-adhd-across-development}}
+
+ADHD typically presents early in life, most often diagnosed and treated
+between childhood and adolescence. Less commonly, ADHD can insidiously
+emerge in adulthood in individuals with no history of inattention,
+hyperactivity, or impulsivity in childhood. Notably, longitudinal data
+from the MTA ADHD Treatment Study suggests 90-95\% of ``adult-onset
+ADHD'' is better accounted for by comorbid psychopathology, personality
+disorders, and/or substance use disorders \emph{misdiagnosed} as ADHD.
+The later-onset expression of ADHD thus appears to be a syndrome
+distinct from childhood-onset ADHD.
+
+\hypertarget{executive-dysfunction-in-emerging-adulthood}{%
+\subsubsection{Executive dysfunction in emerging
+adulthood}\label{executive-dysfunction-in-emerging-adulthood}}
+
+Interconnected networks of heteromodal association cortex orchestrating
+higher executive cognitive functions are still maturing during college.
+It is therefore plausible generalized \emph{executive dysfunction}, not
+undiagnosed ADHD per se, is underlying most clinical referrals for ADHD
+in college students. We posit executive dysfunction is at the core of
+the real-world problems facing college students who self-refer for ADHD
+evaluation and treatment, which accentuates the comorbid difficulties
+these students face such as problematic drug and alcohol use, emotional
+dysregulation, and school failure.
+
+\hypertarget{limited-diagnostic-tools-to-assess-adhd-and-executive-functioning-in-college-students}{%
+\subsubsection{Limited diagnostic tools to assess ADHD and executive
+functioning in college
+students}\label{limited-diagnostic-tools-to-assess-adhd-and-executive-functioning-in-college-students}}
+
+Seeking evaluation and treatment for ADHD for the first time is now
+especially salient on \emph{college campuses}, where the use/misuse of
+prescription stimulant medication as a cognitive-enhancing drug is
+rising faster than the actual incidence of the disorder. The
+proliferation of college-onset ADHD, whether real or feigned, or early
+or late onset, signifies an increase in the demand to evaluate and treat
+ADHD across the lifespan. However, clinicians do not have adequate,
+evidence-based psychodiagnostic tools available to evaluate ADHD/EF in
+this specific population that grows each year, nor do we have many
+objective assessment measures sensitive to \emph{symptom validity} and
+\emph{performance validity}. Poor diagnostic tools lead to diagnostic
+errors, resulting in wasteful, inappropriate, or potentially even
+harmful treatment recommendations. Without better research-derived
+clinical measures, we will continue to overdiagnose and treat students
+faking ADHD for secondary gain \emph{and} underdiagnose students with
+unfeigned ADHD who need medical and/or academic interventions.
+
+\hypertarget{framework}{%
+\subsection{Framework}\label{framework}}
+
+Our long-term goal is to develop a targeted, performance-based executive
+functioning neuropsychological test battery for evaluating the varied
+expressions of ADHD and executive dysfunction in college students
+utilizing deep learning analytical methods. The following research aims
+are proposed:
+
+\hypertarget{aim-1-develop-a-model-of-executive-dysfunction-predictive-of-adhd-fit-using-deep-learning.}{%
+\subsubsection{Aim 1: Develop a model of executive dysfunction
+predictive of ADHD fit using deep
+learning.}\label{aim-1-develop-a-model-of-executive-dysfunction-predictive-of-adhd-fit-using-deep-learning.}}
+
+The model will be psychometrically optimized and sensitive to
+developmental trajectories and feigning ADHD symptoms in college
+students.
+
+\hypertarget{aim-2-assess-the-validity-and-generalizability-of-the-adhd-classification-model-fit-on-independent-datasets.}{%
+\subsubsection{Aim 2: Assess the validity and generalizability of the
+ADHD classification model fit on independent
+datasets.}\label{aim-2-assess-the-validity-and-generalizability-of-the-adhd-classification-model-fit-on-independent-datasets.}}
+
+Importantly, to reduce the length of the final neuropsychological
+battery, poorly performing tests from Aim 1 will not be retained in Aim
+2.
+
+\emph{Sample} Study recruitment will focus on an intentionally
+heterogeneous cohort of 300 undergraduate and graduate students at USC
+with (a) documented histories of confirmed childhood or adolescent ADHD,
+(b) self-reported ``adult-onset ADHD,'' or (c) no history or concern of
+ADHD to identify core neurocognitive signatures of childhood-onset
+versus adult-onset ADHD.
+
+\emph{Executive Function Measures} We will utilize existing
+neuropsychological measures clinicians already use so that our resultant
+findings can be implemented into everyday clinical practice. The
+training test battery will include performance-based, commonly used
+neuropsychological measures of executive functioning from the D-KEFS
+(sequencing, inhibition, switching), NAB Attention and Executive
+Functions Modules (attentional fluency, concept formation, cognitive
+efficiency, everyday attention, judgment), NIH EXAMINER (planning,
+cognitive control, fluency), WAIS-IV (processing speed, verbal working
+memory), and WMS-IV (visual working memory). Intra-individual
+variability, group-level variability, group differences, and
+psychometric properties (validity, reliability, sensitivity, and
+specificity) will be estimated across core latent traits of executive
+functioning and systematically tested for their utility in predicting
+ADHD. Poorly performing tests and/or cognitive factors will not be
+retained for final model validation and testing.
+
+\emph{Malingering} The study will determine which executive function
+measures are optimally sensitive to feigning ADHD for secondary gain in
+college students. To do so, each neuropsychological test will have a
+single-blinded randomized instruction provided to the student to either
+(A) give their best effort or (B) fake having ADHD for secondary gain
+(trained on how to do so). Data will be split into three sets: training,
+validation, and test. The aggregate training and validation datasets
+will allow us to make hard predictions for a new case of the form ``Yes,
+this student is faking ADHD,'' or ``No, this student is not faking
+ADHD.'' The test set allows us to quantify the uncertainty with which
+the prediction is made.
+
+\hypertarget{impact}{%
+\paragraph{Impact}\label{impact}}
+
+ADHD remains improperly diagnosed and treated in tens of thousands of
+promising college students. The consequences of aberrant diagnosis and
+treatment of ADHD during this critical stage of young adult development
+can lead to functional impairments in school performance, educational
+attainment, career development, social-emotional development, and family
+and community life. Thus, the need for evidence-based diagnostic tools
+specific to this rapidly growing clinical population is urgently
+stronger than ever.
+
+\bibliography{references.bib}
+
+
+\end{document}

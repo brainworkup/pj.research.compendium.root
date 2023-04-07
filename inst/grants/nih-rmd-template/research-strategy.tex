@@ -1,0 +1,456 @@
+\documentclass[11pt,]{article}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+\else % if luatex or xelatex
+  \ifxetex
+    \usepackage{mathspec}
+  \else
+    \usepackage{fontspec}
+  \fi
+  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+    \setmainfont[]{Arial}
+\fi
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+% use microtype if available
+\IfFileExists{microtype.sty}{%
+\usepackage{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\usepackage[margin=.5in]{geometry}
+\usepackage{hyperref}
+\hypersetup{unicode=true,
+            pdfborder={0 0 0},
+            breaklinks=true}
+\urlstyle{same}  % don't use monospace font for urls
+\usepackage{natbib}
+\bibliographystyle{plainnat}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{5}
+
+%%% Use protect on footnotes to avoid problems with footnotes in titles
+\let\rmarkdownfootnote\footnote%
+\def\footnote{\protect\rmarkdownfootnote}
+
+
+  \title{}
+    \author{}
+    \date{}
+  
+
+%%%%%%%%%%
+% personal preamble edits here
+%%%%%%%%%%
+\pagenumbering{gobble}
+
+% can toggle this for Helvetica
+%\usepackage{helvet}
+%\renewcommand{\familydefault}{\sfdefault}
+
+% \titlespacing*{\paragraph}{0pt}{2pt}{1em}
+
+% set section numbering/lettering
+% tips for seccntformat: https://tex.stackexchange.com/questions/95896/how-to-format-subsection-title-without-packages
+\makeatletter
+\def\@seccntformat#1{%
+  \expandafter\ifx\csname c@#1\endcsname\c@section\else
+  \expandafter\ifx\csname c@#1\endcsname\c@paragraph\else
+  \csname the#1\endcsname\quad
+  \fi\fi}
+  
+  % stucture for these commands: https://texfaq.org/FAQ-atsigns
+  \renewcommand\section{
+  \@startsection{section}{1}{\z@}
+    {-3.5ex \@plus -1ex \@minus -.2ex}
+    {1.0ex \@plus.2ex} %reduce space below section (was 1.5ex)
+    {\normalfont\normalsize\bf\uppercase}} %modify font style
+    
+  \renewcommand\subsection{
+  \@startsection{subsection}{2}{\z@}
+    {-1.5ex\@plus -1ex \@minus -.2ex}%reduce space above subsection (was -3.25ex)
+    {0.5ex \@plus .2ex}%reduce space below subsection (was 1.5ex)
+    {\normalfont\normalsize\bf}} %modify font style
+    
+  \renewcommand\subsubsection{
+  \@startsection{subsubsection}{3}{\z@}
+    {-1.0ex\@plus -1ex \@minus -.2ex}%reduce space above subsubsection (was -3.25ex)
+    {0.5ex \@plus .2ex}%reduce space below subsubsection (was 1.5ex)
+    {\normalfont\normalsize\bf}} %modify font style
+    
+  \renewcommand\paragraph{
+  \@startsection{paragraph}{4}{\z@}
+    {-0.5ex\@plus -1ex \@minus -.2ex}%reduce space above paragraph (was -3.25ex)
+    {-1.5ex \@plus .2ex}%convert space below paragraph to an indent (was 1.5ex)
+    {\normalfont\normalsize\bf}} %modify font style    
+\makeatother
+
+\renewcommand\thesubsection{\Alph{subsection}.}
+\renewcommand\thesubsubsection{\thesubsection\arabic{subsubsection}.}
+
+% reduce spacing at the top of lists
+\usepackage{enumitem}
+\setlist{topsep = 2pt}
+
+% allow text to wrap around figures
+\usepackage{graphicx}
+\usepackage{wrapfig}
+
+%%%%%%%%%%
+
+\begin{document}
+
+\hypertarget{research-strategy}{%
+\section{Research Strategy}\label{research-strategy}}
+
+\hypertarget{significance}{%
+\subsection{Significance}\label{significance}}
+
+\hypertarget{important-significance-topic.}{%
+\paragraph{Important significance
+topic.}\label{important-significance-topic.}}
+
+Justo platea, ad ut mus himenaeos. Sed a, mauris faucibus, libero eu
+viverra purus. Luctus non ut consectetur eu eu ut quisque tempor magnis.
+In lorem vulputate et nulla mauris, et, at eget, fames viverra.
+Lobortis, a pellentesque. Sed lacus. Massa ipsum sodales risus nisl
+tempor vitae, urna. Interdum sit dui eleifend mattis quisque orci class
+cras quis. Quis diam mauris pretium tempus condimentum in. Sed eu
+facilisis sed ante sagittis consectetur non vel. Fusce hendrerit et
+dignissim, eleifend leo in, egestas.
+
+Nulla fringilla lacus lacinia. In et in est sed, eu vel inceptos luctus
+sed, vulputate mollis nec. Nisi sed purus ut, condimentum efficitur
+potenti. Velit hendrerit vulputate malesuada. Massa sem turpis morbi,
+convallis litora non suscipit faucibus! Amet enim at montes maximus urna
+nisl vitae, sed ut id. Ipsum eget, viverra.
+
+Cursus vivamus commodo sed est a. Dis luctus nisl sed quis habitasse
+taciti mi facilisi nam in. Sed, eu cubilia ut eget et. Neque porttitor
+vehicula porta dolor, vel iaculis litora torquent tincidunt, sed eget.
+In quis ut lorem volutpat commodo morbi, fermentum ad mollis fusce eu
+primis libero. Sociosqu, turpis non proin per orci. Ligula, cras et
+phasellus et auctor nec taciti in blandit quis finibus sit metus vel
+iaculis. Curabitur eros odio sodales. Elementum velit eget mauris
+efficitur faucibus ut sed, lorem. Risus interdum curae. Ullamcorper
+mauris nec massa luctus, ut tempus in ante sodales id sociosqu diam.
+Elementum ac. Sed consequat sed urna torquent non donec cras efficitur
+ipsum lectus sed nec. Ante, duis nascetur mauris erat ac congue cubilia,
+tincidunt penatibus, eu iaculis non, varius.
+
+\hypertarget{another-important-significance-topic.}{%
+\paragraph{Another important significance
+topic.}\label{another-important-significance-topic.}}
+
+Curabitur ac ut nunc erat eros mi et. Sed donec mauris dapibus consequat
+sagittis. Sem, malesuada ac turpis quis in. Facilisis enim facilisi
+pellentesque nunc velit sit felis vel ligula. Id vitae eget et amet,
+primis ac, ut. Ac, at nam, nulla porttitor non. Tristique velit, sed,
+non nullam ut vulputate interdum elit suscipit maximus lobortis. Ex
+pulvinar. Vel ac venenatis suspendisse ac dictumst est. Turpis tortor
+lectus in lorem nascetur non augue. Neque mollis ullamcorper vestibulum
+imperdiet augue dis sem primis est! Eget diam ultrices suspendisse diam
+nascetur justo sed. Neque neque dis tortor orci ut ut quam sem lectus.
+Eros amet sociis maecenas non euismod sed sociis in duis ultricies
+donec. Non leo non. Ac auctor odio, nunc porta nunc eu mattis lobortis.
+
+Conubia, sodales elementum a et turpis, urna euismod ipsum amet! Eu
+volutpat in sed erat. Purus ridiculus pulvinar nunc odio ac nascetur
+cursus, nisl ligula nostra. Sit magnis eros ut auctor tellus, in nulla
+dapibus volutpat nec suspendisse. Molestie ultrices pellentesque in
+tempor sagittis ut fringilla. Erat auctor suspendisse, a porta sed ac
+habitasse scelerisque, eget. Ut accumsan sapien placerat enim aliquet
+volutpat eros, ante sociis. Tempor fermentum ipsum sed montes integer
+etiam maecenas, nisl a justo ac. Ut sed eu risus ac vitae. Maximus
+pellentesque diam dapibus aliquam, himenaeos euismod in. Augue praesent,
+blandit eget, torquent a mattis. Auctor taciti, imperdiet donec sit mi
+aliquam. A ipsum fringilla metus montes nec nibh, varius class, id
+posuere.
+
+\hypertarget{innovation}{%
+\subsection{Innovation}\label{innovation}}
+
+Ac fames quis amet viverra tortor et orci, venenatis. Sed nascetur magna
+ligula accumsan et metus ut urna. Sapien nec non dis ullamcorper vitae
+sed. Integer ex nec natoque arcu risus nisl quisque porttitor purus
+praesent arcu. Blandit, tristique sed congue sed morbi ac donec sagittis
+quis. Sapien dictumst, erat sed sollicitudin lobortis a dictumst justo
+tempor tellus. Amet tristique, ac cursus sociosqu non himenaeos tempus
+tempus, eu dictum molestie himenaeos, morbi risus. Habitasse ut pharetra
+malesuada. Interdum nec felis, dis urna commodo leo nam.
+
+\begin{itemize}
+\tightlist
+\item
+  Some bullets may be helpful to the reviewers here.
+\item
+  Some bullets may be helpful to the reviewers here too.
+\end{itemize}
+
+\hypertarget{approach}{%
+\subsection{Approach}\label{approach}}
+
+\hypertarget{overview-of-the-proposal}{%
+\subsubsection{Overview of the
+proposal}\label{overview-of-the-proposal}}
+
+Viverra lacus sapien nec maecenas metus nascetur auctor nulla
+condimentum dictum. Himenaeos sed. Convallis nulla netus volutpat
+pulvinar. Ligula purus torquent aliquam volutpat vitae nullam tellus. Ut
+purus ante. Sed quis tortor, ipsum phasellus bibendum et. Hendrerit ac
+curabitur mollis felis in dolor, sed tempus nibh donec. Dignissim
+efficitur, sed et gravida id nec laoreet vehicula et laoreet elementum
+nisi fames faucibus nullam vitae. In cum erat leo leo iaculis. Purus id
+in pretium lectus in rhoncus. Maximus ac sapien et pellentesque non
+nascetur malesuada, ultrices varius volutpat nunc, ipsum.
+
+Non, vitae tristique ac elementum tristique nam habitasse tincidunt
+egestas ipsum. Vestibulum maecenas lorem class nec arcu vitae nulla sed
+erat tellus mi. Eleifend molestie malesuada. Varius, eu lectus, id proin
+quam. Turpis ultrices vel eu, sed sodales gravida ut accumsan. Nec in
+natoque magnis, tortor, proin. Justo ac justo ipsum egestas feugiat
+aliquam turpis porta.
+
+\hypertarget{research-team}{%
+\subsubsection{Research team}\label{research-team}}
+
+Mus orci vitae accumsan aenean efficitur at ipsum mi! Cubilia porttitor
+erat tellus magna, dictumst non nulla venenatis habitasse himenaeos sed.
+Ultricies imperdiet sit suscipit ac efficitur. Iaculis eget odio ut
+lectus sed. Lobortis eget. Massa quam quam mauris, in quis amet tempor.
+Vivamus ad ac congue adipiscing vel. Sed, ligula amet mus torquent eu
+nec. Efficitur pellentesque, in congue, accumsan sed suscipit feugiat
+sed velit. Turpis et eleifend venenatis mauris per purus, amet volutpat
+tincidunt cubilia sed gravida maximus.
+
+Tincidunt magna. Auctor condimentum sit nisi sapien vestibulum etiam
+volutpat. Taciti consequat tortor proin felis euismod sed at finibus
+nunc maximus. Vel, scelerisque eros neque cubilia, elit nam. Porttitor
+accumsan sed in cubilia himenaeos cursus cursus et, commodo, sem a.
+Curae volutpat, vitae arcu et arcu malesuada vestibulum. Porttitor
+laoreet aptent lacus tincidunt rutrum ac diam torquent non neque non
+ipsum. Lorem curae dis pretium ac risus magna morbi cubilia. Venenatis
+non suspendisse luctus nulla tristique vestibulum. Eleifend quis cursus
+at libero ultricies quisque a eget ac nisi. Luctus eget magna, natoque.
+Eleifend taciti ut risus elementum euismod nunc.
+
+\hypertarget{preliminary-studies}{%
+\subsubsection{Preliminary studies}\label{preliminary-studies}}
+
+Consequat maximus curabitur leo id dui sed. At torquent proin nec
+consequat luctus at? Ut, porttitor et quis risus, penatibus arcu posuere
+hac, eu. Sed ipsum ac in facilisis quisque risus ornare fusce ipsum
+cursus sapien non. Massa mi cras. Neque duis curabitur orci sem
+consequat ipsum ultricies dui sociis, inceptos aliquet. Vestibulum
+ligula dapibus nec lacus lectus mauris. In eu consequat eu turpis erat
+vivamus diam turpis quam ut phasellus! Mattis class at finibus gravida
+sociosqu felis mi ut sagittis leo. Pulvinar nec mauris placerat,
+curabitur, ullamcorper. Magna maecenas, nec tristique eu dis. Velit
+varius donec magna. Nec porttitor, conubia sed euismod facilisis fusce
+sed at turpis in. Sed dictumst netus tristique ac dignissim lacus.
+Nostra vel eget luctus interdum, porta ut ex fermentum lorem. Curae et
+ut hendrerit tempor proin eu sociosqu, ut, ullamcorper faucibus. Class
+ultricies commodo vestibulum sed quam.
+
+Ut, quis nisl eu risus pharetra. Amet per nec, felis nulla ullamcorper
+nec habitant condimentum. Quam purus potenti quisque, phasellus purus,
+vel sed, nibh sed tellus magna tempor, sed, cum per. Erat leo et aptent
+et. Lacus ac turpis. Ac ut, posuere, maximus metus. In porta ante, lorem
+ut proin praesent natoque. Volutpat lacinia, natoque lacinia sed
+phasellus id. Turpis pellentesque lorem ridiculus nisi mus habitasse
+eget natoque. Volutpat amet quis tempor primis sit sem nulla metus et.
+Nisi tortor quam, a, malesuada pellentesque in semper, hac sed sit. In,
+vitae lectus malesuada natoque orci at maecenas taciti. Cursus nisi
+dolor, dignissim nisl finibus venenatis eu, et diam sed neque. Lorem,
+maecenas tortor vehicula in.
+
+Pulvinar nec ac gravida, ac, fames convallis sollicitudin curae
+suspendisse est lobortis non. Eu turpis et mattis bibendum pellentesque
+ipsum suspendisse sed. Hac malesuada lectus cubilia, lorem lacinia
+himenaeos duis. A, leo in pellentesque auctor faucibus. Sapien
+adipiscing ornare class ante commodo. Sed mauris bibendum hac adipiscing
+venenatis. Quam, et eget diam, erat auctor et ut, et finibus amet quis
+facilisis. Vitae, est ligula porta sed. Habitant magna tempus per nulla
+odio eu ante condimentum donec tellus. Ligula quis commodo tempor
+ullamcorper pellentesque potenti. Aenean sapien. Adipiscing, diam magna
+aliquam iaculis eu diam pretium ut, massa sem, convallis platea. Diam,
+nisi imperdiet in vel arcu at. Interdum ut suscipit id interdum fusce
+lacinia ut nunc, aliquet.
+
+Sed himenaeos tortor, potenti rutrum praesent nec erat suspendisse.
+Scelerisque gravida lorem, nunc malesuada quisque pellentesque hac
+dictum. Nunc at scelerisque. Non id sed penatibus amet laoreet augue leo
+laoreet libero. Metus auctor vulputate posuere egestas, felis arcu
+vestibulum luctus. Sed risus vitae amet consectetur amet. Venenatis
+senectus quisque metus a lorem quis. Libero cras, iaculis imperdiet
+blandit nec sed. Ac viverra cum litora. Interdum ut, fringilla aliquet
+mi phasellus rutrum sed. Est tempus nostra class conubia ut taciti. Sit,
+felis litora, suspendisse a sagittis et nulla mauris, faucibus. Interdum
+per, turpis efficitur aptent tincidunt nec, et maecenas. Porttitor
+lectus ut leo ac nulla.
+
+\begin{wrapfigure}{R}{0.3\textwidth}
+
+\hfill{}\includegraphics[width=.3\textwidth]{research-strategy_files/figure-latex/unnamed-chunk-2-1} 
+
+\caption{Important scatterplot}\label{fig:unnamed-chunk-2}
+\end{wrapfigure}
+
+\hypertarget{resources}{%
+\subsubsection{Resources}\label{resources}}
+
+Varius fusce finibus velit aliquam. Arcu, ut convallis sociis elementum
+libero interdum. Nullam in cras, primis dapibus purus nulla, lorem at.
+Himenaeos elementum commodo pharetra rutrum nec nulla, cras sollicitudin
+aliquam. Eu venenatis, habitasse elementum turpis lobortis vel laoreet!
+Eleifend vitae, nec et et tellus mollis. Ad libero scelerisque egestas
+mauris aliquet ornare feugiat sit. Sagittis, euismod mollis facilisis ex
+quis nulla nec interdum pulvinar ullamcorper. Urna urna in fringilla
+felis ad justo. Ultrices ac vel pellentesque sed lobortis, erat curae
+senectus luctus condimentum est. Montes maecenas condimentum metus
+integer lobortis aenean. Nec per ultricies dui, scelerisque purus.
+Mauris sodales gravida et donec phasellus fringilla vehicula commodo
+nibh in. Arcu nulla magnis dictum curae habitant nibh. Convallis non
+iaculis vitae justo lectus habitant dapibus. Nec sollicitudin turpis
+nunc nostra sapien.
+
+Egestas lectus sapien litora nibh aptent a non tortor mus malesuada in.
+Elementum, aliquam sapien nostra ultricies integer sed. Maecenas, dolor
+metus ac. Fames libero natoque amet. Velit in taciti libero feugiat
+amet. Lacinia, nam urna ante risus mi odio. Posuere litora ut id mollis
+vitae. Iaculis in vel ac nec, in nulla ut. Aenean enim tempor,
+porttitor. Taciti amet aliquam rhoncus conubia nulla ligula efficitur
+sed mauris ante litora odio, magna sed. Hac et. Vulputate ridiculus sed
+malesuada integer dapibus tincidunt. Bibendum dui eu nec aliquam sed,
+porta montes natoque.
+
+\hypertarget{design-and-methods-for-aim-1}{%
+\subsubsection{Design and methods for Aim
+1}\label{design-and-methods-for-aim-1}}
+
+Nibh feugiat dapibus, phasellus pulvinar ornare nec. Nullam aliquam
+pulvinar sed. Posuere quam ante habitant amet ex nascetur phasellus
+montes. Posuere non sapien sem vestibulum, sapien risus auctor quisque
+sed vivamus. Mauris porttitor diam, diam nisl posuere eu dapibus potenti
+nec ex consectetur. Eu quis eleifend phasellus congue, neque sit
+phasellus vel erat tempor iaculis. Vestibulum maximus curabitur montes
+dui. Curabitur porttitor sed nunc torquent orci integer? Eu et mi
+euismod a, turpis viverra aliquam. Sed aliquam id sed efficitur in fusce
+vitae sed massa. Sed turpis ornare himenaeos, sociosqu posuere cursus.
+Parturient nec, nullam suspendisse velit dignissim vestibulum, donec.
+
+Suspendisse efficitur, nibh a enim. Potenti mollis, id, ut neque sociis?
+Odio amet nunc sagittis ut euismod mollis nec. Egestas egestas ut massa
+maximus auctor amet sit. At massa a morbi, vel suspendisse ac. Fusce
+pharetra justo auctor ad. Aptent curabitur eget sit lectus ut ultrices
+dui. Id consequat auctor, ipsum donec interdum nec. Et enim nec posuere
+turpis interdum. Vitae ut imperdiet orci dolor ac non, quam mauris
+magna. Sit nulla rutrum a duis ac efficitur fames facilisis sed aptent
+eget volutpat. Velit et turpis orci eros. Primis nunc ex vel est enim
+neque eget? Iaculis in ipsum primis in sollicitudin et.
+
+\hypertarget{design-and-methods-for-aim-2}{%
+\subsubsection{Design and methods for Aim
+2}\label{design-and-methods-for-aim-2}}
+
+Varius vitae duis nostra in ut leo. Turpis justo quis penatibus luctus
+at ultrices! Consectetur vitae non amet sed quis rutrum hac. Libero
+fames ut at mattis. Ullamcorper cubilia sed lorem ante, pellentesque
+porta. Lacus aenean, magna placerat in id in. Tortor tempor et sit
+eleifend aptent ultricies nulla sociosqu purus sodales sed. Natoque ut
+parturient, senectus justo lacus praesent. Et nisl nascetur nascetur ad
+commodo tincidunt. Sodales montes velit nec sollicitudin penatibus enim
+sem laoreet molestie libero nostra ut, vitae.
+
+Sed in, sed, lacinia. In pellentesque orci nibh lectus enim metus donec
+ut. Tristique lectus purus efficitur aenean. Odio litora sed mattis
+egestas quisque sed sit proin erat. Eget maecenas id et, non a dictum
+nullam, ipsum erat class eu. Nibh nibh vestibulum dui bibendum per, sit,
+nunc a placerat senectus in ligula egestas diam, augue. Arcu egestas
+venenatis quam enim suspendisse malesuada. Phasellus ac, pretium ut eros
+ultrices metus. Ac dictum ac nascetur maximus, ac tempor nullam aliquam
+maximus sed ut. Proin, velit aenean neque. Tempor diam sed.
+
+\hypertarget{design-and-methods-for-aim-3}{%
+\subsubsection{Design and methods for Aim
+3}\label{design-and-methods-for-aim-3}}
+
+Accumsan porta eu sollicitudin proin pretium pellentesque aliquam
+tellus. Justo penatibus, neque, sed egestas ante quis, metus. Nulla
+lacus nunc elementum, gravida lacus. Primis, praesent tempor, sed ex
+convallis dolor lacus in, metus eu, porttitor. Egestas, ipsum, dignissim
+odio erat est sit. Nostra vehicula quis ac, a eget, ante ac. Volutpat
+maecenas class, sed, erat velit. Consequat efficitur ornare odio dolor
+hendrerit blandit. A ac dolor purus cras eget. Quis et pellentesque
+phasellus nascetur ut aenean placerat.
+
+Consectetur leo, praesent quis in vitae sed lobortis eget proin
+pharetra. Orci libero, fringilla nulla dui ridiculus nec senectus
+volutpat. Sit potenti leo elementum suscipit integer, lorem phasellus.
+Accumsan mauris eleifend et mi mauris per sociis dignissim. Sed quisque
+justo duis quisque nibh velit himenaeos nec, sed eu, sollicitudin
+sodales magnis? Lacinia suscipit duis lobortis pulvinar sed, tortor
+convallis cubilia natoque. Ultrices phasellus leo enim quis iaculis sed
+nostra conubia nec luctus et dis.
+
+\hypertarget{timeline}{%
+\subsubsection{Timeline}\label{timeline}}
+
+There are lots of good examples of \texttt{R}-based Gantt charts to be
+found by clever Googling. For displaying progress with sidebar
+annotations by aim, I particularly like
+\href{https://datascienceplus.com/visualize-your-cvs-timeline-with-r-gantt-style/}{\underline{this}}
+example from the
+\href{https://github.com/laresbernardo/lares}{\underline{lares}}
+package.
+
+\hypertarget{rigor-and-reproducibility}{%
+\subsubsection{Rigor and
+reproducibility}\label{rigor-and-reproducibility}}
+
+Condimentum ante quam est leo proin. Posuere nunc, ornare velit gravida
+in. Nunc malesuada amet sed ligula venenatis sed. Nascetur luctus
+malesuada aenean, vestibulum conubia, pretium proin in leo ultricies
+mauris. Eget vel ultricies et luctus vitae eget vitae sociis nibh
+ullamcorper facilisis. Adipiscing dis nam ac nec, imperdiet lacinia arcu
+sapien eros? Venenatis class sed, proin tortor. Sed augue nec, mattis
+velit lacus a justo. Vel metus sed, a et nullam. Volutpat, ut sed
+tempor, bibendum ac sapien ex tincidunt sit erat. A, amet eget magna
+varius mus vestibulum. Elit mollis dictumst, arcu dapibus sed netus
+lorem. Eget hendrerit elit blandit neque non eleifend.
+
+Duis sed fames gravida tortor nam, blandit nec. Lacus pretium nisl
+sagittis est. Fringilla turpis nunc justo et adipiscing blandit etiam id
+ex, congue tincidunt aenean duis congue. Ipsum nibh augue eget, semper
+nulla molestie nam feugiat parturient, vivamus sed at. Suspendisse
+himenaeos, facilisi torquent vel leo ut sed eu vehicula. Purus
+parturient in sed, congue, quam eu. Placerat nostra erat suscipit enim
+erat. Amet maximus velit senectus non, magna imperdiet, posuere
+elementum eget mauris vitae! Ut molestie sed mi tellus vel et. Porttitor
+dictum pharetra, suspendisse velit ut sapien, sed curabitur sed, lorem.
+Platea in lacus, dis lectus quisque rhoncus, mauris est ultricies vel
+purus. Litora, lobortis himenaeos ligula urna eget ipsum velit cursus,
+leo lectus euismod nisi. Egestas phasellus bibendum ac bibendum eu.
+Ridiculus blandit auctor pellentesque cursus tempor nulla quis.
+
+\hypertarget{impact-of-the-proposed-study}{%
+\subsubsection{Impact of the proposed
+study}\label{impact-of-the-proposed-study}}
+
+Ut, fusce et lectus nulla. Dis pharetra sed magna posuere a finibus nisl
+ligula tempor. Aptent pretium velit pellentesque neque fames. In, eget
+laoreet non nibh in. Natoque phasellus metus mi. Penatibus faucibus
+congue ornare quis, vitae sed sociosqu blandit odio, eget, et.
+Consectetur tristique laoreet congue mi magna eu nunc facilisis, aenean
+iaculis senectus tellus et in. Auctor id in lorem suscipit.
+
+\bibliography{references.bib}
+
+
+\end{document}

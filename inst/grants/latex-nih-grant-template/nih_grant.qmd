@@ -1,0 +1,65 @@
+---
+format:
+  pdf:
+    template-partials:
+      - doc-class.tex
+      - biblio.tex
+    number-sections: true
+    mainfont: Arial #Latin Modern Roman
+    mainfontoptions:
+      - Numbers=Lowercase
+      - Numbers=Proportional
+    monofont: Latin Modern Roman
+    sansfont: Latin Modern Sans
+    indent: true
+    geometry:
+      - top=0.5in
+      - bottom=0.5in
+      - left=0.5in
+      - right=0.5in
+      - heightrounded
+      - nohead
+      # - includefoot
+    papersize: letter #a4
+pdf-engine: xelatex
+execute:
+  freeze: auto
+  echo: false
+embed-resources: true
+standalone: true
+latex-auto-mk: true
+---
+
+# Specific Aims
+
+State concisely the goals of the proposed research and summarize the expected outcome(s), including the impact that the results of the proposed research will exert on the research field(s) involved.
+
+List succinctly the specific objectives of the research proposed, e.g., to test a stated hypothesis, create a novel design, solve a specific problem, challenge an existing paradigm or clinical practice, address a critical barrier to progress in the field, or develop new technology.
+
+Specific Aims are limited to one page.
+
+## Specific Aim 1: Do something awesome
+
+List succinctly the specific objectives of the research proposed, e.g., to test a stated hypothesis, create a novel design, solve a specific problem, challenge an existing paradigm or clinical practice, address a critical barrier to progress in the field, or develop new technology.
+
+## Specific Aim 2: Do more of something awesome
+
+List succinctly the specific objectives of the research proposed, e.g., to test a stated hypothesis, create a novel design, solve a specific problem, challenge an existing paradigm or clinical practice, address a critical barrier to progress in the field, or develop new technology.
+
+## Specific Aim 3: Most awesome thing
+
+List succinctly the specific objectives of the research proposed, e.g., to test a stated hypothesis, create a novel design, solve a specific problem, challenge an existing paradigm or clinical practice, address a critical barrier to progress in the field, or develop new technology.
+
+# Research Strategy
+
+## Significance
+
+List succinctly the specific objectives of the research proposed, e.g., to test a stated hypothesis, create a novel design, solve a specific problem, challenge an existing paradigm or clinical practice, address a critical barrier to progress in the field, or develop new technology.
+
+## Innovation
+
+List succinctly the specific objectives of the research proposed, e.g., to test a stated hypothesis, create a novel design, solve a specific problem, challenge an existing paradigm or clinical practice, address a critical barrier to progress in the field, or develop new technology.
+
+## Approach
+
+List succinctly the specific objectives of the research proposed, e.g., to test a stated hypothesis, create a novel design, solve a specific problem, challenge an existing paradigm or clinical practice, address a critical barrier to progress in the field, or develop new technology.

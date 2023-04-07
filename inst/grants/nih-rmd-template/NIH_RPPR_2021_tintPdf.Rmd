@@ -1,0 +1,470 @@
+---
+title: "GWAS of the RDoC Cognitive Systems Domain: Modeling the Latent Genetic Architecture of Working Memory"
+subtitle: "RPPR 2021 Accomplishments"
+author: "Joey Trampush PhD"
+date: "`r Sys.Date()`"
+output: tint::tintPdf
+bibliography: skeleton.bib
+link-citations: yes
+institute: University of Southern California
+---
+
+```{r setup, include=FALSE}
+library(tint)
+# invalidate cache when the package version changes
+knitr::opts_chunk$set(tidy = FALSE, cache.extra = packageVersion('tint'))
+options(htmltools.dir.version = FALSE)
+```
+
+# B. ACCOMPLISHMENTS
+
+# B.1 What are the major goals of the project?
+
+**SPECIFIC AIMS**
+
+**Working Memory**, the most extensively studied of the executive functions, is
+the cognitive system responsible for the transient holding and processing of
+information in conscious awareness just long enough to use it for problem
+solving. Limited working memory faculties are a fundamental aspect of the
+cognitive impairments prevalent in ADHD, schizophrenia, and many other CNS
+disorders. More than half of the variability in working memory capacity from
+person to person can be sourced back to inherited genetic factors. Because it is so highly heritable and diagnostically unbounded, the NIMH Research Domain
+Criteria (RDoC) initiative has prioritized working memory as a core paradigmatic construct to accelerate gene discovery research. Yet, to date, very few genome-wide significant findings have been reported for working memory, and none have been replicated.
+
+As the discovery of loci reliably associated with working memory is key to
+understanding neuropathophysiology, our goal is to fast-track the identification
+and localization of molecular genetic signatures of working memory, and then to
+uncover the underlying causal molecular and biological mechanisms linking
+working memory deficits to genetically correlated disorders. GWAS (genome-wide
+association study) is a powerful approach to identify molecular signatures of
+complex traits if adequate sample sizes and proper statistical procedures are
+employed. We will utilize existing genomic and phenotypic data from the
+Cognitive Genomics Consortium (COGENT) to test novel hypotheses about the
+molecular genetic structure of working memory within the flexible RDoC
+framework. The study PI is an investigator and data analyst for COGENT, which
+was formed to conduct large-scale GWAS of cognitive traits implicated in
+schizophrenia such as general cognitive ability, processing speed, working
+memory, and episodic memory. At present, we have individual-level GWAS data on
+24,000 participants who have 100,000 working memory data points collected for
+analysis. To our knowledge, this would be the largest and most well powered GWAS of working memory to date. The following interrelated specific aims are
+proposed:
+
+**Aim 1. Conduct a common factor GWAS of working memory.**
+
+*Method.* Genomic structural equation modeling (Genomic SEM) will be used to
+ascertain the joint genetic architecture of narrow working memory facets to
+identify loci with effects on a genetically-derived general latent working
+memory factor ("*Gwm*"). *Hypothesis.* With sample sizes in the tens of thousands, the first replicable GWAS hits for working memory are expected to emerge.
+
+**Aim 2. Determine the extent of shared genetic architecture.**
+
+*Method.* At genome-wide scale, linkage disequilibrium score regression (LDSC) and genomic restricted maximum likelihood (GREML) estimation will be used to
+determine the range of pleiotropy between working memory and correlated CNS
+phenotypes. *Hypothesis.* Widespread coheritability is expected to emerge, and Gwm will likely outperform narrower working memory domains and individual working memory subtests.
+
+**Aim 3: Isolate the strongest causal loci.**
+
+*Method.* At the molecular level, Mendelian randomization (MR) will be used to
+determine the direction of causality underlying pleiotropy between working
+memory and correlated CNS phenotypes. *Hypothesis.* *Gwm* hits are expected to
+exhibit strong causal effects from working memory to ADHD and schizophrenia, and moderate causal effects to other CNS phenotypes.
+
+**Aim 4. Map key causal biological mechanisms.**
+
+Method. To prioritize Gwm loci for follow-up studies, functional mapping and
+annotation of genetic associations (FUMA) will be used to characterize the
+biological function of causal loci. Hypothesis. Elucidating the biology of
+working memory is expected to be streamlined by narrowing the search space to
+causal CNS mechanisms.
+
+By deciphering the causal mechanisms through which allelic variation either
+perturbs or protects the working memory system, which in turn can disrupt or
+support the development and function of neural systems underlying working memory across the lifespan, we can leverage the data to enhance theoretical and
+neurobiological models of working memory more solidly grounded in molecular
+genetics for a wide range of applications, which merits in-depth investigation.
+
+## 1.a Have the major goals changed since the initial competing award or previous report?
+
+[x] No
+
+# B.2 What was accomplished under these goals?
+
+For this reporting period, describe:
+1.  Major activities
+
+2.  Specific objectives
+
+3.  Significant results, including major findings, developments, or conclusions
+    (both positive and negative)
+
+4.  Key outcomes or other achievements
+
+Include a discussion of stated goals not met. As the project progresses, the
+emphasis in reporting in this section should shift from reporting activities to
+reporting accomplishments. Goals are equivalent to specific aims. In the response, emphasize the significance of the findings to the scientific field. Include the approaches taken to ensure robust and unbiased results. For most NIH awards the response should not exceed 2 pages.
+
+-   Upload accomplishments [**Add Attachment**]
+
+# B.3 Competitive Revisions/Administrative Supplements
+
+For this reporting period, is there one or more Revision/Supplement associated
+with this award for which reporting is required? Yes [x] No
+
+If yes, identify the Revision(s)/Supplement(s) by grant number (e.g.,
+3R01CA098765-01S1) or title and describe the specific aims and accomplishments
+for each Revision/Supplement funded during this reporting period. Include any
+supplements to promote diversity or re-entry, or other similar supplements to
+support addition of an individual or a discrete project.
+
+Revision/Supplement
+
+or Revision/Supplement Title Total remaining allowed limit is 255 characters.
+
+Describe the specific aims for this Revision/Supplement below (Limit is 700
+characters or approximately 1/4 of a page.) Total remaining allowed limit is 700
+characters. Describe the accomplishments for this Revision/Supplement below
+(Limit is 700 characters or approximately 1/4 of a page.) Total remaining
+allowed limit is 700 characters.
+
+# B.4 What opportunities for training and professional development has the project provided?
+
+If the research is not intended to provide training and professional development
+opportunities or there is nothing significant to report during this reporting
+period, state "Nothing to Report."
+
+Describe opportunities for training and professional development provided to
+anyone who worked on the project or anyone who was involved in the activities
+supported by the project. "Training" activities are those in which individuals
+with advanced professional skills and experience assist others in attaining
+greater proficiency. Training activities may include, for example, courses or
+one-on-one work with a mentor. "Professional development" activities result in
+increased knowledge or skill in one's area of expertise and may include
+workshops, conferences, seminars, study groups, and individual study. Include
+participation in conferences, workshops, and seminars not listed under major
+activities.
+
+DHHS Specific Language For all projects reporting graduate student and/or
+postdoctoral participants in Section D. Participant, grantees are encouraged to
+describe the use of Individual Development Plans (IDPs) for those participants.A
+Do not include the actual IDP; instead include information to document that IDPs
+are used to help manage the training for those individuals.
+
+DHHS Specific Language For T, F, K, R25, R13, D43 and other awards or award
+components designed to provide training and professional development
+opportunities, a response is required. Do not reiterate what is reported under
+Accomplishments. Limit the response to this reporting period.
+
+Nothing to Report or [x] **Upload Description and Diversity Report, as
+applicable**
+
+## High-Performance Computing
+
+Computational research often requires resources that exceed those of a personal
+laptop or desktop computer. High-performance computing aggregates the resources
+from individual computers (known as nodes) into a cluster that works together to
+perform advanced, specialized computing jobs. The Center for Advanced Research
+Computing launched its new high-performance computing cluster, Discovery, in
+August 2020. The new cluster marks a significant upgrade to the CARC's
+cyberinfrastructure, and the first step in a major, user-focused overhaul of the
+program. The Discovery cluster consists of 2 shared login nodes and a total of
+around 11,000 CPU cores in around 500 compute nodes. The typical compute node
+has dual 8 to 16 core processors and resides on a 56 gigabit FDR InfiniBand
+backbone. Nearly 100 GB of storage space is provided for each user to store
+important code and configuration files in their home directories, and the
+BeeGFS/ZFS parallel project file system has a capacity of 8.4 PB of usable
+space, with a default storage quota of 10 TB per Principal Investigator across
+their projects. A rapidly growing fleet of state-of-the art multicore compute
+nodes is available for data-intensive research jobs, backed by two 800 TB,
+high-throughput scratch file systems. A low-latency, high-bandwidth InfiniBand
+network fabric facilitates intense research workloads on large data sets.
+Discovery includes an array of scientific software packages, both licensed and
+open source, for engineering, molecular simulation, and computational chemistry.
+Researchers can also install software packages or develop their own code within
+their project's allotted storage. Discovery is free to use for all USC faculty,
+research staff, and graduate students (with the approval of their faculty
+advisor). For information on how to set up your account and start using the
+cluster, see the Accounts page. If you anticipate working with legally
+restricted or sensitive data (e.g., HIPAA-, FERPA-, or CUI-regulated data), see
+the Secure Computing page. Researchers also have the option of participating in
+the Condo Cluster Program (CCP). The CCP allows researchers to reserve computing
+resources for dedicated use by their projects, giving them the flexibility of
+having their own cluster without the responsibility of purchasing hardware or
+performing maintenance. For more information on the CCP, see the Condo Cluster
+Program page.
+
+## The Penn Letter N-Back Test
+
+The Penn Letter N-Back Test measures working memory (WM), the ability to keep
+and refresh goal-related information. Participants attend to a continual series
+of letters that flash on the screen (one at a time) and press the spacebar
+according to three different rules (called the 0-back, 1-back, and 2-back).
+During the 0-back condition, the participant must simply respond to a currently
+present target ("X"). During the 1-back condition, he/she must press the
+spacebar when the letter on the screen is the same as the previous letter.
+During the 2-back condition, he/she must press the spacebar when the letter on
+the screen is the same as the letter before the previous letter (i.e. 2 letters
+back). In all trials, the inter-stimulus interval (ISI) is 2.5 seconds, and the
+stimuli (letters) themselves are presented for 0.5 seconds each. The participant
+practices all three principles before testing.
+
+# B.5 How have the results been disseminated to communities of interest?
+
+Describe how the results have been disseminated to communities of interest.
+Include any outreach activities that have been undertaken to reach members of
+communities who are not usually aware of these research activities, for the
+purpose of enhancing public understanding and increasing interest in learning
+and careers in science, technology, and the humanities.
+
+DHHS Specific Language Reporting the routine dissemination of information (e.g.,
+websites, press releases) is not required. For awards not designed to
+disseminate information to the public or conduct similar outreach activities, a
+response is not required and the grantee should select "Nothing to Report". A
+detailed response is only required for awards or award components that are
+designed to disseminate information to the public or conduct similar outreach
+activities. Note that scientific publications and the sharing of research
+sources will be reported under Products.
+
+Nothing to Report
+
+**or enter response below (NIH recommended length is up to 1 page.** Limit is
+8000 characters or approximately 3 pages.)
+
+Total remaining allowed limit is 8000 characters.
+
+# B.6 What do you plan to do during the next reporting period to accomplish the goals?
+
+Describe briefly what you plan to do during the next reporting period to
+accomplish the goals and objectives.
+
+DHHS Specific Language Discuss efforts to ensure that the approach is
+scientifically rigorous and results are robust and unbiased. Remember that
+significant changes in objectives and scope require prior approval of the agency
+(e.g., NIH Grants Policy Statement, 8.1.2.).
+
+DHHS Specific Language Include any important modifications to the original
+plans. Provide a scientific justification for any changes involving research
+with human subjects or vertebrate animals. A detailed description of such
+changes must be provided under Changes.
+
+**Enter response below (NIH recommended length is up to 1 page. Limit is 8000
+characters or approximately 3 pages.)** Total remaining allowed limit is 8000
+characters.
+
+> insert
+
+> end
+
+\newpage
+
+# Products
+
+## publications, conference papers, and presentations
+
+## website(s) or other Internet site(s)
+
+## technologies or techniques
+
+## inventions, patent applications, and/or licenses
+
+## other products, such as data or databases, physical collections, audio or video products, software, models, educational aids or curricula, instruments or equipment, research material, interventions (e.g., clinical or educational), or new business creation.
+
+# Participants and Other Collaborating Organizations
+
+Amanda Law Jack Bowden
+
+# Impact
+
+Zero
+
+# Changes/Problems (not required for Final or Interim RPPR)
+
+## Changes in approach and reasons for change
+
+## Actual or anticipated problems or delays and actions or plans to resolve them
+
+## Changes that have a significant impact on expenditures
+
+## Significant changes in use or care of human subjects, vertebrate animals, biohazards, and/or select agents
+
+# Budgetary Information (not required for Final or Interim RPPR)
+
+N/A
+
+## Project Outcomes (only required on Final and Interim RPPR)
+
+## Concise summary of the outcomes or findings of the award, written for the general public in clear and comprehensible language, without including any proprietary, confidential information or trade secrets
+
+Note: project outcome information will be made public in NIH RePORTER Link to
+External Site
+
+# Figures
+
+## Margin Figures
+
+Images and graphics play an integral role in Tufte's work. To place figures in
+the margin you can use the **knitr** chunk option `fig.margin = TRUE`. For
+example:
+
+```{r fig-margin, fig.margin = TRUE, fig.cap = "MPG vs horsepower, colored by transmission.", fig.width=3.5, fig.height=3.5, cache=TRUE}
+library(ggplot2)
+mtcars2 <- mtcars
+mtcars2$am <- factor(
+  mtcars$am, labels = c('automatic', 'manual')
+)
+ggplot(mtcars2, aes(hp, mpg, color = am)) +
+  geom_point() + geom_smooth() +
+  theme(legend.position = 'bottom')
+```
+
+Note the use of the `fig.cap` chunk option to provide a figure caption. You can
+adjust the proportions of figures using the `fig.width` and `fig.height` chunk
+options. These are specified in inches, and will be automatically scaled down to
+fit within the handout margin.
+
+## Arbitrary Margin Content
+
+In fact, you can include anything in the margin using the **knitr** engine named
+`marginfigure`. Unlike R code chunks ```` ```{r} ````, you write a chunk
+starting with ```` ```{marginfigure} ```` instead, then put the content in the
+chunk. See an example on the right about the first fundamental theorem of
+calculus.
+
+```{marginfigure}
+We know from _the first fundamental theorem of calculus_ that for $x$ in $[a, b]$:
+$$\frac{d}{dx}\left( \int_{a}^{x} f(u)\,du\right)=f(x).$$
+```
+
+For the sake of portability between LaTeX and HTML, you should keep the margin
+content as simple as possible (syntax-wise) in the `marginefigure` blocks. You
+may use simple Markdown syntax like `**bold**` and `_italic_` text, but please
+refrain from using footnotes, citations, or block-level elements (e.g.
+blockquotes and lists) there.
+
+## Full Width Figures
+
+You can arrange for figures to span across the entire page by using the chunk
+option `fig.fullwidth = TRUE`.
+
+```{r fig-fullwidth, fig.width = 10, fig.height = 2, fig.fullwidth = TRUE, fig.cap = "A full width figure.", warning=FALSE, cache=TRUE}
+ggplot(diamonds, aes(carat, price)) + geom_smooth() +
+  facet_grid(~ cut)
+```
+
+Other chunk options related to figures can still be used, such as `fig.width`,
+`fig.cap`, `out.width`, and so on. For full width figures, usually `fig.width`
+is large and `fig.height` is small. In the above example, the plot size is
+$10 \times 2$.
+
+## Main Column Figures
+
+Besides margin and full width figures, you can of course also include figures
+constrained to the main column. This is the default type of figures in the
+LaTeX/HTML output.
+
+```{r fig-main, fig.cap = "A figure in the main column.", cache=TRUE}
+ggplot(diamonds, aes(cut, price)) + geom_boxplot()
+```
+
+# Sidenotes
+
+One of the most prominent and distinctive features of this style is the
+extensive use of sidenotes. There is a wide margin to provide ample room for
+sidenotes and small figures. Any use of a footnote will automatically be
+converted to a sidenote. [^1]
+
+[^1]: This is a sidenote that was entered using a footnote.
+
+If you'd like to place ancillary information in the margin without the sidenote
+mark (the superscript number), you can use the `margin_note()` function from
+**tufte** in an inline R expression.
+`r margin_note("This is a margin note.  Notice that there is no number preceding the note.")`
+This function does not process the text with Pandoc, so Markdown syntax will not
+work here. If you need to write anything in Markdown syntax, please use the
+`marginfigure` block described previously.
+
+# References
+
+References can be displayed as margin notes for HTML output. For example, we can
+cite R here [@R-base]. To enable this feature, you must set
+`link-citations: yes` in the YAML metadata, and the version of `pandoc-citeproc`
+should be at least 0.7.2. You can always install your own version of Pandoc from
+<http://pandoc.org/installing.html> if the version is not sufficient. To check
+the version of `pandoc-citeproc` in your system, you may run this in R:
+
+```{r eval=FALSE}
+system2('pandoc-citeproc', '--version')
+```
+
+If your version of `pandoc-citeproc` is too low, or you did not set
+`link-citations: yes` in YAML, references in the HTML output will be placed at
+the end of the output document.
+
+# Tables
+
+You can use the `kable()` function from the **knitr** package to format tables
+that integrate well with the rest of the Tufte handout style. The table captions
+are placed in the margin like figures in the HTML output.
+
+```{r}
+knitr::kable(
+  mtcars[1:6, 1:6], caption = 'A subset of mtcars.'
+)
+```
+
+# Block Quotes
+
+We know from the Markdown syntax that paragraphs that start with `>` are
+converted to block quotes. If you want to add a right-aligned footer for the
+quote, you may use the function `quote_footer()` from **tufte** in an inline R
+expression. Here is an example:
+
+> "If it weren't for my lawyer, I'd still be in prison. It went a lot faster
+> with two people digging."
+>
+> `r tint::quote_footer('--- Joe Martin')`
+
+Without using `quote_footer()`, it looks like this (the second line is just a
+normal paragraph):
+
+> "Great people talk about ideas, average people talk about things, and small
+> people talk about wine."
+>
+> --- Fran Lebowitz
+
+# Some Notes on Tufte CSS
+
+There are a few other things in Tufte CSS that we have not mentioned so far. If
+you prefer `r sans_serif('sans-serif fonts')`, use the function `sans_serif()`
+in **tufte**. For epigraphs, you may use a pair of underscores to make the
+paragraph italic in a block quote, e.g.
+
+> *I can win an argument on any topic, against any opponent. People know this,
+> and steer clear of me at parties. Often, as a sign of their great respect,
+> they don't even invite me.*
+>
+> `r quote_footer('--- Dave Barry')`
+
+We hope you will enjoy the simplicity of R Markdown and this R package, and we
+sincerely thank the authors of the Tufte-CSS and Tufte-LaTeX projects for
+developing the beautiful CSS and LaTeX classes. Our **tufte** package would not
+have been possible without their heavy lifting.
+
+To see the R Markdown source of this example document, you may follow [this link
+to
+Github](https://github.com/eddelbuettel/tint/blob/master/inst/rmarkdown/templates/pdf/skeleton/skeleton.Rmd),
+use the wizard in RStudio IDE
+(`File -> New File -> R Markdown -> From Template`), or open the Rmd file in the
+package:
+
+```{r eval=FALSE}
+file.edit(
+  tint:::template_resources(
+    'tint', '..', 'skeleton', 'skeleton.Rmd'
+  )
+)
+```
+
+```{r bib, include=FALSE}
+# create a bib file for the R packages used in this document
+knitr::write_bib(c('base', 'rmarkdown'), file = 'skeleton.bib')
+```

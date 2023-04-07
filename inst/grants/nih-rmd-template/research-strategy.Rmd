@@ -1,0 +1,106 @@
+---
+output: 
+   pdf_document: 
+      template: template.tex
+      keep_tex: true
+      number_sections: true
+      latex_engine: xelatex
+      citation_package: natbib
+geometry: margin=.5in
+mainfont: Arial
+fontsize: 11pt
+indent: true
+subparagraph: true
+bibliography: references.bib
+---
+
+<!-- a clever hack for wrapfig from https://stackoverflow.com/questions/54100806/r-markdown-how-do-i-make-text-float-around-figures -->
+
+```{r, include = F}
+defOut <- knitr::knit_hooks$get("plot")  # save the default plot hook 
+knitr::knit_hooks$set(plot = function(x, options) {  # set new plot hook ...
+  x <- defOut(x, options)  # first apply the default hook
+  if(!is.null(options$wrapfigure)) {  # then, if option wrapfigure is given ...
+    # create the new opening string for the wrapfigure environment ...
+    wf <- sprintf("\\begin{wrapfigure}{%s}{%g\\textwidth}", options$wrapfigure[[1]], options$wrapfigure[[2]])
+    x  <- gsub("\\begin{figure}", wf, x, fixed = T)  # and replace the default one with it.
+    x  <- gsub("{figure}", "{wrapfigure}", x, fixed = T)  # also replace the environment ending
+  }
+  return(x)
+})
+```
+
+# Research Strategy
+
+## Significance
+
+#### Important significance topic.
+
+`r paste(stringi::stri_rand_lipsum(3, start_lipsum = FALSE), collapse = "\n\n")`
+
+#### Another important significance topic.
+
+`r paste(stringi::stri_rand_lipsum(2, start_lipsum = FALSE), collapse = "\n\n")\`
+
+## Innovation
+
+`r paste(stringi::stri_rand_lipsum(1, start_lipsum = FALSE), collapse = "\n\n")`
+
+-   Some bullets may be helpful to the reviewers here.
+-   Some bullets may be helpful to the reviewers here too.
+
+## Approach
+
+### Overview of the proposal
+
+`r paste(stringi::stri_rand_lipsum(2, start_lipsum = FALSE), collapse = "\n\n")`
+
+### Research team
+
+`r paste(stringi::stri_rand_lipsum(2, start_lipsum = FALSE), collapse = "\n\n")`
+
+### Preliminary studies
+
+`r paste(stringi::stri_rand_lipsum(4, start_lipsum = FALSE), collapse = "\n\n")`
+
+```{=html}
+<!-- 
+\begin{wrapfigure}{R}{0.7\textwidth}
+\hfill{}\includegraphics[width=.7\textwidth]{image.pdf}
+\caption{My Flowchart}\label{fig:unnamed-chunk-2}
+\end{wrapfigure} 
+-->
+```
+```{r echo = F, warning = F, message = F, fig.width=7, fig.height = 6, out.width = ".3\\textwidth", fig.cap = "Important scatterplot", fig.align="right", wrapfigure = list("R", .3)}
+
+plot(mpg ~ hp, data = mtcars)
+```
+
+### Resources
+
+`r paste(stringi::stri_rand_lipsum(2, start_lipsum = FALSE), collapse = "\n\n")`
+
+### Design and methods for Aim 1
+
+`r paste(stringi::stri_rand_lipsum(2, start_lipsum = FALSE), collapse = "\n\n")`
+
+### Design and methods for Aim 2
+
+`r paste(stringi::stri_rand_lipsum(2, start_lipsum = FALSE), collapse = "\n\n")`
+
+### Design and methods for Aim 3
+
+`r paste(stringi::stri_rand_lipsum(2, start_lipsum = FALSE), collap e = "\n\ n")`
+
+### Timeline
+
+There are lots of good examples of `R`-based Gantt charts to be found by clever Googling.
+For displaying progress with sidebar annotations by aim, I particularly like [\underline{this}](https://datascienceplus.com/visualize-your-cvs-timeline-with-r-gantt-style/) example from the [\underline{lares}](https://github.com/laresberndo/lares) package.
+
+### Rigor and reproducibility
+
+`r paste(stringi::stri_rand_lipsum(2, start_lipsum = FALSE), collapse = "\n\n")`
+
+### Impact othe proposed study
+
+`r paste(stringi::stri_rand_lipsum(1, start_lipsum = FALSE), collapse  "\n\n")`

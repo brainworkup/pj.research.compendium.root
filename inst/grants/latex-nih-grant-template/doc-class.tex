@@ -1,0 +1,47 @@
+%% For NIH grant application %%
+%% July 2010 %%
+%% Tatsuki Koyama %%
+
+\documentclass[11pt]{scrartcl}  %11 or 12 pt scrartcl
+
+% Packages some may find useful.
+\usepackage{graphicx,epsf,pstricks,psfrag,rotating,subfigure} % rotating, subfigure
+
+% New NIH specifications
+% font = Arial, Helvetica, Palatino Linotype, or Georgia typeface
+% font size 11 or larger
+% margin = at least one-half inch
+% Use at least one-half inch margins for all pages.  
+% No information should appear in the margins, including the PI's name and page numbers.
+
+\renewcommand{\rmdefault}{phv} % Arial
+\renewcommand{\sfdefault}{phv} % Arial
+
+% \usepackage[width=7.0in, height=9.5in, head=0.0in, foot=0.0in, headsep=0.0in]{geometry}
+%% This controls margins.  Can't go over width=7.5in, height=10.0in.  
+%% top-bottom margins = (11-height)/2  left-right margins = (8.5-width)/2
+
+\usepackage{setspace} % useful in changing vertical spacing temporarily.
+
+\usepackage{natbib} % natbib was there; more control over how references appear within text.
+\bibpunct{[}{]}{,}{n}{}{} % like so.
+%% use \citep{ref} instead of \cite{ref} in text.
+
+\usepackage[immediate]{silence}
+\WarningFilter[temp]{latex}{Command} % silence the warning
+\usepackage{sectsty} % can change font, size of the section headings.  
+\sectionfont      {\fontsize{12pt}{3}\usefont{OT1}{phv}{b}{sc}\selectfont}
+\subsectionfont   {\fontsize{11pt}{3}\usefont{OT1}{phv}{b}{n}\selectfont}
+\subsubsectionfont{\fontsize{11pt}{3}\usefont{OT1}{phv}{m}{n}\selectfont}
+\DeactivateWarningFilters[temp] % So nothing unrelated gets silenced
+
+\renewcommand{\thesection}{\Alph{section}} % so that section headings use A B C instead 1 2 3
+\renewcommand{\baselinestretch}{1}
+
+\renewcommand\refname{\section{Literature Cited} \vspace{-1em}} 
+%% This changes ``Reference'' to ``Literature Cited''.  
+
+\newcommand{\inden}[1]{\mbox{} \hspace{#1} } % Force horizontal spaces.  
+
+% -- % -- % -- % -- % -- %
+% -- % -- % -- % -- % -- %

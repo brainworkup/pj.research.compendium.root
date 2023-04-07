@@ -1,0 +1,123 @@
+%% For NIH grant application %%
+%% July 2010 %%
+%% Tatsuki Koyama %%
+
+\documentclass[11pt]{article}  %11 or 12 pt
+
+% Packages some may find useful.
+\usepackage{graphicx,epsf,pstricks,subfigure,psfrag,rotating}
+
+% New NIH specifications
+% font = Arial, Helvetica, Palatino Linotype, or Georgia typeface
+% font size 11 or larger
+% margin = at least one-half inch
+% Use at least one-half inch margins for all pages.  
+% No information should appear in the margins, including the PI's name and page numbers.
+
+\renewcommand{\rmdefault}{phv} % Arial
+\renewcommand{\sfdefault}{phv} % Arial
+
+\usepackage[width=7.0in, height=9.5in, head=0.0in, foot=0.0in, headsep=0.0in]{geometry}
+%% This controls margins.  Can't go over width=7.5in, height=10.0in.  
+%% top-bottom margins = (11-height)/2  left-right margins = (8.5-width)/2
+
+\usepackage{setspace} % useful in changing vertical spacing temporarily.
+
+\usepackage{natbib} % more control over how references appear within text.
+\bibpunct{[}{]}{,}{n}{}{} % like so.
+%% use \citep{ref} instead of \cite{ref} in text.
+
+\usepackage{sectsty} % can change font, size of the section headings.  
+\sectionfont      {\fontsize{12pt}{3}\usefont{OT1}{phv}{b}{sc}\selectfont}
+\subsectionfont   {\fontsize{11pt}{3}\usefont{OT1}{phv}{b}{n}\selectfont}
+\subsubsectionfont{\fontsize{11pt}{3}\usefont{OT1}{phv}{m}{n}\selectfont}
+
+\renewcommand{\thesection}{\Alph{section}} % so that section headings use A B C instead 1 2 3
+\renewcommand{\baselinestretch}{1}
+
+\renewcommand\refname{\section{Literature Cited} \vspace{-1em}} 
+%% This changes ``Reference'' to ``Literature Cited''.  
+
+\newcommand{\inden}[1]{\mbox{} \hspace{#1} } % Force horizontal spaces.  
+
+% -- % -- % -- % -- % -- %
+% -- % -- % -- % -- % -- %
+\begin{document}
+\pagestyle{empty}
+
+% -- % -- % -- % -- % -- %
+% -- % -- % -- % -- % -- %
+\section{Specific Aims}
+State concisely the goals of the proposed research and summarize the expected outcome(s), 
+including the impact that the results of the proposed research will exert on the research field(s) involved.
+
+List succinctly the specific objectives of the research proposed, e.g., to test a stated hypothesis, 
+create a novel design, solve a specific problem, challenge an existing paradigm or clinical practice, 
+address a critical barrier to progress in the field, or develop new technology.
+
+Specific Aims are limited to one page.
+
+% -- % -- % -- % -- % -- %
+\subsection{Specific Aim 1: Develop something amazing.}
+\inden{2em}   A.1.1: sub aim 1\\
+\inden{2em} A.1.2: sub aim 2\\
+\inden{2em}   A.1.3: sub aim 3
+
+% -- % -- % -- % -- % -- %
+\subsection{Specific Aim 2: Develop more amazing things.}
+This and that
+
+% -- % -- % -- % -- % -- %
+%\newpage
+\section{Research Strategy}
+Organize the Research Strategy in the specified order and using the instructions provided below. 
+Start each section with the appropriate section heading . Significance, Innovation, Approach. 
+Cite published experimental details in the Research Strategy section and provide the full reference 
+in the Bibliography and References Cited section.
+
+% -- % -- % -- % -- % -- %
+\subsection{Significance}
+
+% -- % -- % -- % -- % -- %
+\begin{itemize}
+\item Explain the importance of the problem or critical barrier to progress in the field 
+that the proposed project addresses.
+\item Explain how the proposed project will improve scientific knowledge, technical capability, 
+and/or clinical practice in one or more broad fields.
+\item Describe how the concepts, methods, technologies, treatments, services, 
+or preventative interventions that drive this field will be changed if the proposed aims are achieved.
+\end{itemize}
+
+% -- % -- % -- % -- % -- %
+\subsection{Innovation}
+
+% -- % -- % -- % -- % -- %
+\begin{itemize}
+\item Explain how the application challenges and seeks to shift current research or clinical practice paradigms.
+\item Describe any novel theoretical concepts, approaches or methodologies, instrumentation or interventions 
+to be developed or used, and any advantage over existing methodologies, instrumentation, or interventions.
+\item Explain any refinements, improvements, or new applications of theoretical concepts, 
+approaches or methodologies, instrumentation, or interventions.
+\end{itemize}
+
+% -- % -- % -- % -- % -- %
+\subsection{Approach}
+
+% -- % -- % -- % -- % -- %
+\begin{itemize}
+\item Describe the overall strategy, methodology, and analyses to be used to accomplish the specific aims of the project. 
+Unless addressed separately in Item 15 (Resource Sharing Plan), include how the data will be collected, analyzed, 
+and interpreted as well as any resource sharing plans as appropriate.
+\item Discuss potential problems, alternative strategies, and benchmarks for success anticipated to achieve the aims.
+\item If the project is in the early stages of development, describe any strategy to establish feasibility, 
+and address the management of any high risk aspects of the proposed work.
+\item Point out any procedures, situations, or materials that may be hazardous to personnel and precautions to be exercised. 
+A full discussion on the use of Select Agents should appear in Item 11, below. 
+\end{itemize}
+
+% -- % -- % -- % -- % -- %
+\bibliographystyle{myrefstyle} %unsrt should work, too.  copy myrefstyle.bst in the same directory as the .tex file.
+\bibliography{ref} % Or wherever you keep your .bib file.
+
+% -- % -- % -- % -- % -- %
+\end{document}
