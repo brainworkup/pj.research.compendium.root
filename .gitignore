@@ -36,3 +36,6 @@ pods/service-connections
 data/
 
 /.quarto/
+
+.history/
+_extensions/

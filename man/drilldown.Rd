@@ -2,7 +2,7 @@
 % Please edit documentation in R/make_plots.R
 \name{drilldown}
 \alias{drilldown}
-\title{FUNCTION_TITLE}
+\title{Drilldown function}
 \usage{
 drilldown(data, patient = NULL, mean_z, mean_percentile, ...)
 }
@@ -19,29 +19,11 @@ drilldown(data, patient = NULL, mean_z, mean_percentile, ...)
 }
 \value{
 OUTPUT_DESCRIPTION
-
-OUTPUT_DESCRIPTION
-
-OUTPUT_DESCRIPTION
-
-OUTPUT_DESCRIPTION
 }
 \description{
-FUNCTION_DESCRIPTION
-
-FUNCTION_DESCRIPTION
-
-FUNCTION_DESCRIPTION
-
-FUNCTION_DESCRIPTION
+Drillown on plots using Highcharter
 }
 \details{
-DETAILS
-
-DETAILS
-
-DETAILS
-
 DETAILS
 }
 \examples{
@@ -50,38 +32,8 @@ if(interactive()){
  #EXAMPLE1
  }
 }
-\dontrun{
-if(interactive()){
- #EXAMPLE1
- }
-}
-\dontrun{
-if(interactive()){
- #EXAMPLE1
- }
-}
-\dontrun{
-if(interactive()){
- #EXAMPLE1
- }
-}
 }
 \seealso{
-\code{\link[tidytable]{group_by}}, \code{\link[tidytable]{summarize}}, \code{\link[tidytable]{mutate}}, \code{\link[tidytable]{case_when}}, \code{\link[tidytable]{arrange}}
-\code{\link[desc]{desc}}
-\code{\link[tibble]{tibble}}
-\code{\link[highcharter]{list_parse}}, \code{\link[highcharter]{tooltip_table}}, \code{\link[highcharter]{highchart}}, \code{\link[highcharter]{hc_title}}, \code{\link[highcharter]{hc_add_series}}, \code{\link[highcharter]{hcaes}}, \code{\link[highcharter]{hc_xAxis}}, \code{\link[highcharter]{hc_yAxis}}, \code{\link[highcharter]{hc_tooltip}}, \code{\link[highcharter]{hc_plotOptions}}, \code{\link[highcharter]{hc_drilldown}}, \code{\link[highcharter]{hc_add_theme}}, \code{\link[highcharter]{hc_theme_sandsignika}}
-
-\code{\link[tidytable]{group_by}}, \code{\link[tidytable]{summarize}}, \code{\link[tidytable]{mutate}}, \code{\link[tidytable]{case_when}}, \code{\link[tidytable]{arrange}}
-\code{\link[desc]{desc}}
-\code{\link[tibble]{tibble}}
-\code{\link[highcharter]{list_parse}}, \code{\link[highcharter]{tooltip_table}}, \code{\link[highcharter]{highchart}}, \code{\link[highcharter]{hc_title}}, \code{\link[highcharter]{hc_add_series}}, \code{\link[highcharter]{hcaes}}, \code{\link[highcharter]{hc_xAxis}}, \code{\link[highcharter]{hc_yAxis}}, \code{\link[highcharter]{hc_tooltip}}, \code{\link[highcharter]{hc_plotOptions}}, \code{\link[highcharter]{hc_drilldown}}, \code{\link[highcharter]{hc_add_theme}}, \code{\link[highcharter]{hc_theme_sandsignika}}
-
-\code{\link[tidytable]{group_by}}, \code{\link[tidytable]{summarize}}, \code{\link[tidytable]{mutate}}, \code{\link[tidytable]{case_when}}, \code{\link[tidytable]{arrange}}
-\code{\link[desc]{desc}}
-\code{\link[tibble]{tibble}}
-\code{\link[highcharter]{list_parse}}, \code{\link[highcharter]{tooltip_table}}, \code{\link[highcharter]{highchart}}, \code{\link[highcharter]{hc_title}}, \code{\link[highcharter]{hc_add_series}}, \code{\link[highcharter]{hcaes}}, \code{\link[highcharter]{hc_xAxis}}, \code{\link[highcharter]{hc_yAxis}}, \code{\link[highcharter]{hc_tooltip}}, \code{\link[highcharter]{hc_plotOptions}}, \code{\link[highcharter]{hc_drilldown}}, \code{\link[highcharter]{hc_add_theme}}, \code{\link[highcharter]{hc_theme_sandsignika}}
-
 \code{\link[tidytable]{group_by}}, \code{\link[tidytable]{summarize}}, \code{\link[tidytable]{mutate}}, \code{\link[tidytable]{case_when}}, \code{\link[tidytable]{arrange}}
 \code{\link[desc]{desc}}
 \code{\link[tibble]{tibble}}

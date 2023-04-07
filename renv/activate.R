@@ -2,7 +2,7 @@
 local({
 
   # the requested version of renv
-  version <- "0.16.0-65"
+  version <- "0.17.0-2"
 
   # the project directory
   project <- getwd()
@@ -347,8 +347,7 @@ local({
       return()
   
     # allow directories
-    info <- file.info(tarball, extra_cols = FALSE)
-    if (identical(info$isdir, TRUE)) {
+    if (dir.exists(tarball)) {
       name <- sprintf("renv_%s.tar.gz", version)
       tarball <- file.path(tarball, name)
     }
@@ -702,6 +701,12 @@ local({
   
     # warn if the version of renv loaded does not match
     renv_bootstrap_validate_version(version)
+  
+    # execute renv load hooks, if any
+    hooks <- getHook("renv::autoload")
+    for (hook in hooks)
+      if (is.function(hook))
+        tryCatch(hook(), error = warning)
   
     # load the project
     renv::load(project)

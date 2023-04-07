@@ -1,6 +1,6 @@
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# pj.research.compendium.root
+# Research Project Compendium
 
 <!-- badges: start -->
 
@@ -11,10 +11,11 @@ MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://choosealicens
 [![LifeCycle](https://img.shields.io/badge/lifecycle-experimental-orange)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 [![Project Status:
 Active](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
-[![Dependencies](https://img.shields.io/badge/dependencies-18/127-red?style=flat)](#)
+[![Dependencies](https://img.shields.io/badge/dependencies-14/80-red?style=flat)](#)
+
 <!-- badges: end -->
 
-Research Compendium of the project **{{ PLEASE ADD A FEW WORDS }}**
+Research Compendium of the project **{{ TODO: }}**
 
 ### How to cite
 
@@ -26,50 +27,53 @@ Please cite this compendium as:
 
 This repository is structured as follow:
 
--   [`data/`](https://github.com/brainworkup/pj.research.compendium.root/tree/master/data):
-    contains all raw data required to perform analyses
+- [`data/`](https://github.com/brainworkup/pj.research.compendium.root/tree/master/data):
+  contains all raw data required to perform analyses
 
--   [`analysis/`](https://github.com/brainworkup/pj.research.compendium.root/tree/master/analysis/):
-    contains R scripts to run each step of the workflow
+- [`analysis/`](https://github.com/brainworkup/pj.research.compendium.root/tree/master/analysis/):
+  contains R scripts to run each step of the workflow
 
--   [`outputs/`](https://github.com/brainworkup/pj.research.compendium.root/tree/master/outputs):
-    contains all the results created during the workflow
+- [`code/`](https://github.com/brainworkup/pj.research.compendium.root/tree/master/code/):
+  contains R scripts to run each step of the workflow
 
--   [`figures/`](https://github.com/brainworkup/pj.research.compendium.root/tree/master/figures):
-    contains all the figures created during the workflow
+- [`outputs/`](https://github.com/brainworkup/pj.research.compendium.root/tree/master/outputs):
+  contains all the results created during the workflow
 
--   [`R/`](https://github.com/brainworkup/pj.research.compendium.root/tree/master/R):
-    contains R functions developed especially for this project
+- [`figures/`](https://github.com/brainworkup/pj.research.compendium.root/tree/master/figures):
+  contains all the figures created during the workflow
 
--   [`man/`](https://github.com/brainworkup/pj.research.compendium.root/tree/master/man):
-    contains help files of R functions
+- [`R/`](https://github.com/brainworkup/pj.research.compendium.root/tree/master/R):
+  contains R functions developed especially for this project
 
--   [`DESCRIPTION`](https://github.com/brainworkup/pj.research.compendium.root/tree/master/DESCRIPTION):
-    contains project metadata (author, date, dependencies, etc.)
+- [`man/`](https://github.com/brainworkup/pj.research.compendium.root/tree/master/man):
+  contains help files of R functions
 
--   [`make.R`](https://github.com/brainworkup/pj.research.compendium.root/tree/master/make.R):
-    main R script to run the entire project by calling each R script
-    stored in the `analyses/` folder
+- [`DESCRIPTION`](https://github.com/brainworkup/pj.research.compendium.root/tree/master/DESCRIPTION):
+  contains project metadata (author, date, dependencies, etc.)
+
+- [`make.R`](https://github.com/brainworkup/pj.research.compendium.root/tree/master/make.R):
+  main R script to run the entire project by calling each R script stored in the
+  `analyses/` folder
 
 ### Usage
 
--   Clone this repository
--   Open a terminal
--   Build the Docker image with:
+- Clone this repository
+- Open a terminal
+- Build the Docker image with:
 
 <!-- -->
 
     docker build -t "pj.research.compendium.root" .
 
--   Start a container based on this image:
+- Start a container based on this image:
 
 <!-- -->
 
     docker run --rm -p 127.0.0.1:8787:8787 -e DISABLE_AUTH=true pj.research.compendium.root
 
--   On a web browser enter this URL: `127.0.0.1:8787`. A new RStudio
-    Server instance will be available.
--   To run the analysis:
+- On a web browser enter this URL: `127.0.0.1:8787`. A new RStudio Server
+  instance will be available.
+- To run the analysis:
 
 <!-- -->
 
@@ -77,7 +81,7 @@ This repository is structured as follow:
 
 ### Notes
 
--   All required packages, listed in the `DESCRIPTION` file, will be
-    installed (if necessary)
--   All required packages and R functions will be loaded
--   Some analyses listed in the `make.R` might take time
+- All required packages, listed in the `DESCRIPTION` file, will be installed (if
+  necessary)
+- All required packages and R functions will be loaded
+- Some analyses listed in the `make.R` might take time

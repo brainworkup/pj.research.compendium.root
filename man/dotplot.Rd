@@ -2,7 +2,7 @@
 % Please edit documentation in R/make_plots.R
 \name{dotplot}
 \alias{dotplot}
-\title{FUNCTION_TITLE}
+\title{Dotplot function}
 \usage{
 dotplot(data, x, y, ...)
 }
