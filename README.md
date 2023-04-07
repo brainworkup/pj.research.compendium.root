@@ -33,8 +33,11 @@ This repository is structured as follow:
 - [`analysis/`](https://github.com/brainworkup/pj.research.compendium.root/tree/master/analysis/):
   contains R scripts to run each step of the workflow
 
-- [`code/`](https://github.com/brainworkup/pj.research.compendium.root/tree/master/code/):
+- [`scripts/`](https://github.com/brainworkup/pj.research.compendium.root/tree/master/scripts/):
   contains R scripts to run each step of the workflow
+
+- [`grants/`](https://github.com/brainworkup/pj.research.compendium.root/tree/master/grants/):
+  contains research grant applications
 
 - [`outputs/`](https://github.com/brainworkup/pj.research.compendium.root/tree/master/outputs):
   contains all the results created during the workflow
@@ -53,7 +56,7 @@ This repository is structured as follow:
 
 - [`make.R`](https://github.com/brainworkup/pj.research.compendium.root/tree/master/make.R):
   main R script to run the entire project by calling each R script stored in the
-  `analyses/` folder
+  `analysis/` folder
 
 ### Usage
 
