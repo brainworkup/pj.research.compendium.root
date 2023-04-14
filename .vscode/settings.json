@@ -7,7 +7,8 @@
     "activityBarBadge.background": "#d4c3dc",
     "activityBarBadge.foreground": "#15202b",
     "sideBar.border": "#538e7c",
-    "tab.activeBorder": "#538e7c"
+    "tab.activeBorder": "#538e7c",
+    "sash.hoverBorder": "#538e7c"
   },
   "peacock.color": "#406e60",
   "type": "R-Debugger",
