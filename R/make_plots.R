@@ -1,4 +1,4 @@
-#' @title Dotplot function
+#' @title FUNCTION_TITLE
 #' @description FUNCTION_DESCRIPTION
 #' @param data PARAM_DESCRIPTION
 #' @param x PARAM_DESCRIPTION
@@ -16,12 +16,12 @@
 #'  \code{\link[ggplot2]{ggplot}}, \code{\link[ggplot2]{geom_segment}}, \code{\link[ggplot2]{aes}}, \code{\link[ggplot2]{geom_point}}, \code{\link[ggplot2]{theme}}, \code{\link[ggplot2]{margin}}
 #'  \code{\link[stats]{reorder.default}}
 #'  \code{\link[ggthemes]{theme_fivethirtyeight}}
-#' @rdname dotplot
+#' @rdname bwu_geom_dotplot
 #' @export 
 #' @importFrom ggplot2 ggplot geom_segment aes geom_point theme element_rect
 #' @importFrom stats reorder
 #' @importFrom ggthemes theme_fivethirtyeight
-dotplot <- function(data, x, y, ...) {
+bwu_geom_dotplot <- function(data, x, y, ...) {
   ggplot2::ggplot() +
     ggplot2::geom_segment(
       data = data,
@@ -48,8 +48,8 @@ dotplot <- function(data, x, y, ...) {
 }
 
 
-#' @title Drilldown function
-#' @description Drillown on plots using Highcharter
+#' @title FUNCTION_TITLE
+#' @description FUNCTION_DESCRIPTION
 #' @param data PARAM_DESCRIPTION
 #' @param patient PARAM_DESCRIPTION, Default: NULL
 #' @param mean_z PARAM_DESCRIPTION
@@ -68,13 +68,13 @@ dotplot <- function(data, x, y, ...) {
 #'  \code{\link[desc]{desc}}
 #'  \code{\link[tibble]{tibble}}
 #'  \code{\link[highcharter]{list_parse}}, \code{\link[highcharter]{tooltip_table}}, \code{\link[highcharter]{highchart}}, \code{\link[highcharter]{hc_title}}, \code{\link[highcharter]{hc_add_series}}, \code{\link[highcharter]{hcaes}}, \code{\link[highcharter]{hc_xAxis}}, \code{\link[highcharter]{hc_yAxis}}, \code{\link[highcharter]{hc_tooltip}}, \code{\link[highcharter]{hc_plotOptions}}, \code{\link[highcharter]{hc_drilldown}}, \code{\link[highcharter]{hc_add_theme}}, \code{\link[highcharter]{hc_theme_sandsignika}}
-#' @rdname drilldown
+#' @rdname bwu_geom_drilldown
 #' @export 
 #' @importFrom tidytable group_by summarize mutate case_when arrange
 #' @importFrom desc desc
 #' @importFrom tibble tibble
 #' @importFrom highcharter list_parse tooltip_table highchart hc_title hc_add_series hcaes hc_xAxis hc_yAxis hc_tooltip hc_plotOptions hc_drilldown hc_add_theme hc_theme_sandsignika
-drilldown <- function(data, patient = NULL, mean_z, mean_percentile, ...) {
+bwu_geom_drilldown <- function(data, patient = NULL, mean_z, mean_percentile, ...) {
 
   # Create 4 levels of dataframes for drilldown -----------------------
   ## Level 1 -------------------------------------------------------
@@ -290,7 +290,7 @@ drilldown <- function(data, patient = NULL, mean_z, mean_percentile, ...) {
   tt <- highcharter::tooltip_table(x, y)
 
   ## Create drilldown bar plot zscores
-  plot <-
+  p <-
     highcharter::highchart() %>%
     highcharter::hc_title(
       text = patient,
@@ -326,5 +326,5 @@ drilldown <- function(data, patient = NULL, mean_z, mean_percentile, ...) {
     ) %>%
     highcharter::hc_add_theme(highcharter::hc_theme_sandsignika())
   
-  return(plot)
+  return(p)
 }

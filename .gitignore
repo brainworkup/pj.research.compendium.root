@@ -39,3 +39,5 @@ data/
 
 .history/
 _extensions/
+renv/
+.Rprofile

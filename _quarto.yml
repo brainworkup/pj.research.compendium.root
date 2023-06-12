@@ -16,3 +16,10 @@ format:
     documentclass: scrreprt
     margin-left: 30mm
     margin-right: 30mm
+
+execute:
+  freeze: auto
+  echo: false
+  warning: false
+  messages: false
+  cache: false

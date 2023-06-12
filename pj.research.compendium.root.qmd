@@ -7,10 +7,23 @@ date: today
 ## Setup
 
 ```{r}
+#| eval: false
+# Edit .Rprofile/.Renviron/.Rmakevars ------------------------------------------------------------
+
+usethis::edit_r_profile()
+usethis::edit_r_environ()
+usethis::edit_r_makevars()
+
+```
+
+```{r}
 library(sketchy)
 library(vertical)
 library(rcompendium)
 library(sinew)
+library(gptstudio)
+library(gpttools)
+library(openai)
 
 rcompendium::new_compendium(
   compendium = ".",
@@ -37,7 +50,6 @@ update.packages(ask = FALSE, checkBuilt = TRUE)
 tinytex::tlmgr_update()
 
 ### pak
-
 install.packages("pak", repos = sprintf(
   "https://r-lib.github.io/p/pak/stable/%s/%s/%s",
   .Platform$pkgType,
@@ -47,14 +59,19 @@ install.packages("pak", repos = sprintf(
 
 pak::lockfile_create()
 
+pak::pak("brainworkup/bwu")
 pak::pkg_install("brainworkup/bwu")
 
 pak::pkg_install("brainworkup/bwu", dependencies = TRUE)
 
+pak::pak("JamesHWade/gpttools")
+pak::pak("MichelNivard/gptstudio")
+
+renv::install("glue")
 ```
 
 ```{r}
- ## rcompendium  
+## rcompendium  
 rcompendium::refresh()
 
 rcompendium::refresh(
@@ -76,6 +93,7 @@ rcompendium::add_to_gitignore("renv/")
 rcompendium::add_to_buildignore(c(
   "bibliography.bib", 
   "code/",
+  "scripts/",
   "dendron.yml",
   "docs/", 
   "elsarticle-num.bst", 
@@ -103,6 +121,8 @@ rcompendium::add_github_actions_render()
 # Get all external dependencies
 rcompendium::get_all_dependencies(pkg = "tidytable")
 
+# Add renv
+rcompendium::add_renv()
 ```
 
 ```{r}
@@ -131,9 +151,6 @@ vertical::init_som()
 
 ```{r}
 
-# Add renv
-rcompendium::add_renv()
-
 pkg_dir_R <- "R/"
 sinew::pretty_namespace(pkg_dir_R, overwrite = TRUE)
 sinew::sinew_opts$set(markdown_links = TRUE)
@@ -160,7 +177,7 @@ devtools::document()
 # Use rcompendium::add_dependencies(".") to update the list of required dependencies in DESCRIPTION
 rcompendium::add_dependencies(".")
 # Do not use install.packages() but remotes::install_deps() (this will install required dependencies listed in DESCRIPTION)
-remotes::install_deps()
+renv::install()
 # Do not use library() but devtools::load_all() (this will load required dependencies listed in DESCRIPTION and R functions stored in R/)
 devtools::load_all()
 # Do not source your functions but use instead devtools::load_all()

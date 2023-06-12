@@ -4,7 +4,7 @@
 \name{pj.research.compendium.root-package}
 \alias{pj.research.compendium.root}
 \alias{pj.research.compendium.root-package}
-\title{pj.research.compendium.root: The Title of the Project}
+\title{pj.research.compendium.root: Brainwork Research Compendium Template}
 \description{
 A paragraph providing a full description of the project (on several lines...)
 }

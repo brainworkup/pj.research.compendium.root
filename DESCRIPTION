@@ -1,7 +1,7 @@
 Package: pj.research.compendium.root
 Type: Package
-Title: The Title of the Project
-Version: 0.0.0.9000
+Title: Brainwork Research Compendium Template
+Version: 0.0.1.9000
 Authors@R: c(
     person(given   = "Joey",
            family  = "Trampush",
@@ -37,3 +37,4 @@ Imports:
     tabulizer,
     tibble,
     tidytable
+Depends: R (>= 4.0)

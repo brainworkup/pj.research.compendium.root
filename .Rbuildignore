@@ -37,3 +37,5 @@ analysis
 ^pj\.research\.compendium\.root\.code-workspace$
 ^pj\.research\.compendium\.root\.qmd$
 ^pkg\.lock$
+^\.Rprofile$
+^scripts$
