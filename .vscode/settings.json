@@ -8,7 +8,12 @@
     "activityBarBadge.foreground": "#15202b",
     "sideBar.border": "#538e7c",
     "tab.activeBorder": "#538e7c",
-    "sash.hoverBorder": "#538e7c"
+    "sash.hoverBorder": "#538e7c",
+    "editorError.foreground": "#000000ff",
+    "editorGroup.border": "#538e7c",
+    "editorInfo.foreground": "#000000ff",
+    "editorWarning.foreground": "#000000ff",
+    "panel.border": "#538e7c"
   },
   "peacock.color": "#406e60",
   "type": "R-Debugger",
